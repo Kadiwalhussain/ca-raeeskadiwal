@@ -857,7 +857,7 @@ export default function AdminDashboard() {
                 <img src="/ca-india-logo.png" alt="CA India Logo" style={{ width: 36, height: 36, objectFit: "contain", display: "block" }} />
               </div>
               <div>
-                <div className="sidebar-brand">CA Raees<br />Kadiwal & Co.</div>
+                <div className="sidebar-brand">Raees Kadiwal<br />& Co.</div>
                 <div className="sidebar-role">Admin Panel</div>
               </div>
             </div>

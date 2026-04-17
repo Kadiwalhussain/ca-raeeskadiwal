@@ -104,7 +104,7 @@ export default function Footer() {
               </div>
               <div className="flex flex-col leading-tight">
                 <span className="font-heading font-semibold text-sm text-white leading-tight">
-                  CA Raees Kadiwal &amp; Co.
+                  Raees Kadiwal &amp; Co.
                 </span>
                 <span className="text-[10px] text-gray-500 tracking-widest uppercase">
                   Chartered Accountants
@@ -243,7 +243,7 @@ export default function Footer() {
       <div className="border-t" style={{ borderColor: "rgba(255,255,255,0.07)" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-2">
           <p className="text-gray-600 text-xs">
-            &copy; {year} CA Raees Kadiwal &amp; Co. All rights reserved.
+            &copy; {year} Raees Kadiwal &amp; Co. All rights reserved.
           </p>
           <p className="text-gray-700 text-xs">
             ICAI Registered Firm · Mumbai, Maharashtra · India

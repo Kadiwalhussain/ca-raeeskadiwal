@@ -5,7 +5,7 @@ import { useState } from "react";
 // Primary WhatsApp number — Income Tax, Audit & General queries
 const WA_NUMBER = "919967839778";
 const WA_MESSAGE =
-  "Hello CA Raees Kadiwal & Co.,\n\nI found your website and would like to inquire about your CA services.\n\nPlease guide me further. Thank you!";
+  "Hello Raees Kadiwal & Co. (Chartered Accountants),\n\nI found your website and would like to inquire about your services.\n\nPlease guide me further. Thank you!";
 const WA_URL = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(WA_MESSAGE)}`;
 
 export default function WhatsAppButton() {
@@ -32,7 +32,7 @@ export default function WhatsAppButton() {
         href={WA_URL}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Chat with CA Raees Kadiwal on WhatsApp"
+        aria-label="Chat with Raees Kadiwal & Co. on WhatsApp"
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
         className="relative flex items-center justify-center w-14 h-14 rounded-full shadow-2xl transition-transform duration-200 hover:scale-110 active:scale-95"

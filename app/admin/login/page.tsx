@@ -366,7 +366,7 @@ export default function AdminLogin() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="/ca-india-logo.png" alt="CA India Logo" style={{ width: 36, height: 36, objectFit: "contain", display: "block" }} />
             </div>
-            <div className="left-logo-text">CA Raees<br />Kadiwal & Co.</div>
+            <div className="left-logo-text">Raees Kadiwal<br />& Co.</div>
           </div>
 
           <div className="left-hero">
@@ -462,7 +462,7 @@ export default function AdminLogin() {
               </button>
             </form>
 
-            <p className="footer-note">CA Raees Kadiwal & Co. · Authorized personnel only</p>
+            <p className="footer-note">Raees Kadiwal & Co. (Chartered Accountants) · Authorized personnel only</p>
           </div>
         </div>
       </div>

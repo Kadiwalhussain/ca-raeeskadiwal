@@ -70,15 +70,14 @@ export default function About() {
             className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold mb-5 leading-tight"
             style={{ color: "var(--navy)" }}
           >
-            About CA Raees Kadiwal &amp; Co.
+            About Raees Kadiwal &amp; Co.
           </h2>
           <div
             className="w-14 h-1 rounded-full mb-6"
             style={{ backgroundColor: "var(--gold)" }}
           />
           <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
-            Founded on principles of integrity and excellence, CA Raees Kadiwal
-            &amp; Co. is a full-service Chartered Accountant firm serving
+            Founded on principles of integrity and excellence, <strong className="text-[var(--navy)]">Raees Kadiwal &amp; Co.</strong> is a full-service Chartered Accountant (CA) firm serving
             businesses, professionals, and HNIs across India for over{" "}
             <strong className="text-[var(--navy)]">17 years</strong>. We
             combine deep regulatory knowledge with a pragmatic approach to help

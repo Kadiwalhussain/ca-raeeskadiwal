@@ -82,7 +82,7 @@ export default function Navbar() {
                   )}
                   style={isLight ? { color: "var(--navy)" } : {}}
                 >
-                  CA Raees Kadiwal &amp; Co.
+                  Raees Kadiwal &amp; Co.
                 </span>
                 <span
                   className={cn(

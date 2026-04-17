@@ -16,9 +16,9 @@ const poppins = Poppins({
 });
 
 const SITE_URL = "https://www.raeeskadiwal.com";
-const SITE_NAME = "CA Raees Kadiwal & Co.";
+const SITE_NAME = "Raees Kadiwal & Co.";
 const DESCRIPTION =
-  "CA Raees Kadiwal & Co. — Trusted Chartered Accountant firm in Malad East, Mumbai with 17+ years of expertise. Expert in ITR filing, GST registration & compliance, company registration, statutory audit, TDS filing, NRI taxation, and financial advisory. Serving Pan-India clients from Mumbai – 400097.";
+  "Raees Kadiwal & Co. — Trusted Chartered Accountant (CA) firm in Malad East, Mumbai with 17+ years of expertise. Expert in ITR filing, GST registration & compliance, company registration, statutory audit, TDS filing, NRI taxation, and financial advisory. Serving Pan-India clients from Mumbai – 400097.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -32,8 +32,8 @@ export const metadata: Metadata = {
 
   keywords: [
     // Primary — firm & location
-    "CA Raees Kadiwal",
-    "CA Raees Kadiwal & Co",
+    "Raees Kadiwal & Co",
+    "Raees Kadiwal Chartered Accountant",
     "Chartered Accountant Malad East Mumbai",
     "CA firm Malad East",
     "CA in Malad East Mumbai",
@@ -117,7 +117,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "CA Raees Kadiwal & Co. — Chartered Accountant Firm in Malad East, Mumbai",
+        alt: "Raees Kadiwal & Co. — Chartered Accountant Firm in Malad East, Mumbai",
       },
     ],
   },
@@ -146,7 +146,7 @@ const jsonLd = {
       "@type": ["AccountingService", "ProfessionalService", "LocalBusiness"],
       "@id": `${SITE_URL}/#business`,
       name: SITE_NAME,
-      alternateName: ["CA Raees Kadiwal", "Raees Kadiwal & Co"],
+      alternateName: ["Raees Kadiwal & Co", "Raees Kadiwal Chartered Accountants", "CA Raees Kadiwal"],
       url: SITE_URL,
       logo: {
         "@type": "ImageObject",

@@ -186,7 +186,7 @@ export default function Contact() {
     name: "",
     phone: "",
     email: "",
-    service: "",
+    service: "Income Tax (ITR) Filing",
     message: "",
   });
   const [errors, setErrors] = useState<FormErrors>({});
@@ -359,7 +359,7 @@ export default function Contact() {
             {/* Google Map embed — Fatima Tower */}
             <div className="rounded-xl overflow-hidden shadow-sm h-56 lg:h-64" style={{ border: "1px solid rgba(212,175,55,0.25)" }}>
               <iframe
-                title="CA Raees Kadiwal & Co. — Shop No. 10, Fatima Tower, Malad East, Mumbai"
+                title="Raees Kadiwal & Co. — Chartered Accountants — Shop No. 10, Fatima Tower, Malad East, Mumbai"
                 src="https://maps.google.com/maps?q=19.1791743,72.8616513&hl=en&z=19&output=embed"
                 width="100%"
                 height="100%"
@@ -492,9 +492,6 @@ export default function Contact() {
                         onBlur={handleBlur}
                         className={cn(inputClass(errors.service), "cursor-pointer")}
                       >
-                        <option value="" disabled>
-                          — Select a service —
-                        </option>
                         {SERVICES.map((s) => (
                           <option key={s} value={s}>
                             {s}

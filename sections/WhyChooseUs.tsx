@@ -105,7 +105,7 @@ export default function WhyChooseUs() {
           </Badge>
           <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
             Why Choose{" "}
-            <span style={{ color: "var(--gold)" }}>CA Raees Kadiwal</span>?
+            <span style={{ color: "var(--gold)" }}>Raees Kadiwal &amp; Co.</span>?
           </h2>
           <div
             className="w-14 h-1 rounded-full mx-auto mb-5"
