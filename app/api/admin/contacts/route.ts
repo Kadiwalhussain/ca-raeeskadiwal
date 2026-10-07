@@ -1,9 +1,13 @@
 import { NextRequest } from "next/server";
 import { connectDB } from "@/lib/mongodb";
 import Contact from "@/lib/models/Contact";
+import { isAdminAuthenticated } from "@/lib/auth";
 
 export async function GET(request: NextRequest) {
   try {
+    if (!(await isAdminAuthenticated()))
+      return Response.json({ error: "Unauthorized" }, { status: 401 });
+
     const { searchParams } = new URL(request.url);
     const status = searchParams.get("status");
     const page = Math.max(1, parseInt(searchParams.get("page") ?? "1"));
@@ -26,6 +30,9 @@ export async function GET(request: NextRequest) {
 
 export async function PATCH(request: NextRequest) {
   try {
+    if (!(await isAdminAuthenticated()))
+      return Response.json({ error: "Unauthorized" }, { status: 401 });
+
     let body: { id?: string; status?: string };
     try {
       body = await request.json();
@@ -53,6 +60,9 @@ export async function PATCH(request: NextRequest) {
 
 export async function DELETE(request: NextRequest) {
   try {
+    if (!(await isAdminAuthenticated()))
+      return Response.json({ error: "Unauthorized" }, { status: 401 });
+
     let body: { id?: string };
     try {
       body = await request.json();

@@ -64,12 +64,14 @@ export default function AdminDashboard() {
 
   const loadStats = useCallback(async () => {
     const res = await fetch("/api/admin/stats");
+    if (res.status === 401) { router.replace("/admin/login"); return; }
     if (res.ok) setStats(await res.json());
-  }, []);
+  }, [router]);
 
   const loadContacts = useCallback(async () => {
     setLoading(true);
     const res = await fetch(`/api/admin/contacts?status=${filter}&page=${page}`);
+    if (res.status === 401) { router.replace("/admin/login"); return; }
     if (res.ok) {
       const data = await res.json();
       setContacts(data.contacts);
@@ -77,7 +79,7 @@ export default function AdminDashboard() {
       setPages(data.pages);
     }
     setLoading(false);
-  }, [filter, page]);
+  }, [filter, page, router]);
 
   useEffect(() => { loadStats(); }, [loadStats]);
   useEffect(() => { loadContacts(); }, [loadContacts]);

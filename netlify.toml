@@ -1,0 +1,13 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+# Netlify auto-installs this when it detects Next.js, but pinning it makes
+# builds reproducible. It wires up the serverless functions for the API
+# routes and server-rendered pages.
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[build.environment]
+  # Build-time Node version. Next.js 16 requires Node 18.18+ / 20+.
+  NODE_VERSION = "20"

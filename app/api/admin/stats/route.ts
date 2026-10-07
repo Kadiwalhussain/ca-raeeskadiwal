@@ -1,8 +1,12 @@
 import { connectDB } from "@/lib/mongodb";
 import Contact from "@/lib/models/Contact";
+import { isAdminAuthenticated } from "@/lib/auth";
 
 export async function GET() {
   try {
+    if (!(await isAdminAuthenticated()))
+      return Response.json({ error: "Unauthorized" }, { status: 401 });
+
     await connectDB();
 
     const now = new Date();
