@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Badge } from "@/components/ui/badge";
+import SectionHeading from "@/components/SectionHeading";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -164,7 +164,7 @@ function PlanCard({ plan }: { plan: Plan }) {
         </p>
         <div className="flex items-baseline gap-1">
           <span
-            className={`font-heading font-bold text-3xl ${
+            className={`font-heading font-semibold text-4xl nums ${
               plan.highlighted ? "text-white" : ""
             }`}
             style={plan.highlighted ? {} : { color: "var(--navy)" }}
@@ -246,34 +246,15 @@ function PlanCard({ plan }: { plan: Plan }) {
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="py-20 lg:py-28" style={{ backgroundColor: "#FFFEF5" }}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="pricing" className="py-20 lg:py-28" style={{ backgroundColor: "#FFFEF8" }}>
+      <div className="max-w-6xl mx-auto px-5 sm:px-8">
         {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <Badge
-            className="mb-4 text-xs font-semibold px-3 py-1 rounded-full border"
-            style={{
-              backgroundColor: "rgba(212,175,55,0.12)",
-              borderColor: "rgba(206,137,70,0.35)",
-              color: "var(--navy)",
-            }}
-          >
-            Transparent Pricing
-          </Badge>
-          <h2
-            className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 leading-tight"
-            style={{ color: "var(--navy)" }}
-          >
-            Simple, Honest Pricing
-          </h2>
-          <div
-            className="w-14 h-1 rounded-full mx-auto mb-5"
-            style={{ backgroundColor: "var(--gold)" }}
+        <div className="mb-14">
+          <SectionHeading
+            kicker="What it costs"
+            title="Clear prices, set before we start"
+            lead="No hidden charges and no surprises on the invoice — you'll know the fee before any work begins. These are starting points; your quote is confirmed in the consultation."
           />
-          <p className="text-gray-500 text-base sm:text-lg leading-relaxed">
-            No hidden charges. No surprises. Pay only for what you need — with
-            the quality of a top-tier CA firm.
-          </p>
         </div>
 
         {/* ITR Filing Plans */}

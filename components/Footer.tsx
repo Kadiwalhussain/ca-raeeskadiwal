@@ -2,21 +2,21 @@ import Link from "next/link";
 import Image from "next/image";
 
 const services = [
-  { label: "Income Tax Filing", href: "#services" },
-  { label: "GST Compliance", href: "#services" },
-  { label: "Audit & Assurance", href: "#services" },
-  { label: "Company Registration", href: "#services" },
-  { label: "Tax Planning", href: "#services" },
-  { label: "NRI Taxation", href: "#services" },
+  { label: "Income Tax Filing", href: "/#services" },
+  { label: "GST Compliance", href: "/#services" },
+  { label: "Audit & Assurance", href: "/#services" },
+  { label: "Company Registration", href: "/#services" },
+  { label: "Tax Planning", href: "/#services" },
+  { label: "NRI Taxation", href: "/#services" },
 ];
 
 const quickLinks = [
-  { label: "Home", href: "#home" },
-  { label: "Services", href: "#services" },
-  { label: "About Us", href: "#about" },
-  { label: "Our Process", href: "#process" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/#home" },
+  { label: "Services", href: "/#services" },
+  { label: "About Us", href: "/#about" },
+  { label: "Insights", href: "/blog" },
+  { label: "Pricing", href: "/#pricing" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 const socialLinks = [
@@ -73,7 +73,7 @@ export default function Footer() {
             </p>
           </div>
           <Link
-            href="#contact"
+            href="/#contact"
             className="shrink-0 inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-sm transition-opacity hover:opacity-90"
             style={{ backgroundColor: "var(--gold)", color: "var(--navy)" }}
           >

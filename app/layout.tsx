@@ -1,18 +1,23 @@
 import type { Metadata } from "next";
-import { Inter, Poppins } from "next/font/google";
+import { Fraunces, Hanken_Grotesk } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
+// Display serif — old-style, high-contrast, characterful. Carries the
+// heritage + precision of a long-established chartered accountancy.
+const fraunces = Fraunces({
+  variable: "--font-fraunces",
   subsets: ["latin"],
   display: "swap",
+  weight: ["400", "500", "600", "700", "900"],
+  style: ["normal", "italic"],
 });
 
-const poppins = Poppins({
-  variable: "--font-poppins",
+// Body / UI grotesque — clean and legible without reading as a startup default.
+const hanken = Hanken_Grotesk({
+  variable: "--font-hanken",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
   display: "swap",
+  weight: ["400", "500", "600", "700"],
 });
 
 const SITE_URL = "https://www.raeeskadiwal.com";
@@ -245,7 +250,7 @@ export default function RootLayout({
   return (
     <html
       lang="en-IN"
-      className={`${inter.variable} ${poppins.variable} h-full antialiased`}
+      className={`${hanken.variable} ${fraunces.variable} h-full antialiased`}
     >
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />

@@ -1,4 +1,4 @@
-import { Badge } from "@/components/ui/badge";
+import SectionHeading from "@/components/SectionHeading";
 
 const pillars = [
   {
@@ -52,61 +52,35 @@ const expertise = [
 
 export default function About() {
   return (
-    <section id="about" className="py-20 lg:py-28" style={{ backgroundColor: "#FFFEF5" }}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" className="py-20 lg:py-28" style={{ backgroundColor: "#FFFEF8" }}>
+      <div className="max-w-6xl mx-auto px-5 sm:px-8">
         {/* Header */}
-        <div className="max-w-2xl mb-16">
-          <Badge
-            className="mb-4 text-xs font-semibold px-3 py-1 rounded-full border"
-            style={{
-              backgroundColor: "rgba(212,175,55,0.12)",
-              borderColor: "rgba(206,137,70,0.35)",
-              color: "var(--navy)",
-            }}
-          >
-            Who We Are
-          </Badge>
-          <h2
-            className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold mb-5 leading-tight"
-            style={{ color: "var(--navy)" }}
-          >
-            About Raees Kadiwal &amp; Co.
-          </h2>
-          <div
-            className="w-14 h-1 rounded-full mb-6"
-            style={{ backgroundColor: "var(--gold)" }}
+        <div className="mb-16">
+          <SectionHeading
+            kicker="Who we are"
+            title="A Mumbai practice that has grown up with its clients"
+            lead="Since 2007, Raees Kadiwal & Co. has looked after the tax, compliance and advisory needs of businesses, professionals and families across India. We pair deep regulatory knowledge with plain-spoken advice — the kind you can actually act on."
           />
-          <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
-            Founded on principles of integrity and excellence, <strong className="text-[var(--navy)]">Raees Kadiwal &amp; Co.</strong> is a full-service Chartered Accountant (CA) firm serving
-            businesses, professionals, and HNIs across India for over{" "}
-            <strong className="text-[var(--navy)]">17 years</strong>. We
-            combine deep regulatory knowledge with a pragmatic approach to help
-            you stay compliant and financially strong.
-          </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* Left: Pillars */}
-          <div className="grid sm:grid-cols-2 gap-6">
+          <div className="grid sm:grid-cols-2 gap-x-10 gap-y-9">
             {pillars.map((item) => (
-              <div
-                key={item.title}
-                className="p-5 rounded-lg border hover:shadow-md transition-shadow duration-200 group"
-                style={{ borderColor: "rgba(212,175,55,0.2)", backgroundColor: "#FFFEF5" }}
-              >
+              <div key={item.title}>
                 <div
-                  className="w-11 h-11 rounded-lg flex items-center justify-center mb-4 text-white transition-colors"
-                  style={{ backgroundColor: "var(--navy)" }}
+                  className="w-11 h-11 rounded-lg flex items-center justify-center mb-4"
+                  style={{ backgroundColor: "rgba(212,175,55,0.14)", color: "var(--caramel)" }}
                 >
                   {item.icon}
                 </div>
                 <h3
-                  className="font-heading font-semibold text-base mb-2"
+                  className="font-heading font-medium text-lg mb-2"
                   style={{ color: "var(--navy)" }}
                 >
                   {item.title}
                 </h3>
-                <p className="text-sm text-gray-500 leading-relaxed">
+                <p className="text-sm text-[#6B5938] leading-relaxed">
                   {item.desc}
                 </p>
               </div>

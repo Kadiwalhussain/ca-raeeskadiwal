@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -10,21 +11,33 @@ const navLinks = [
   { label: "Home", href: "#home" },
   { label: "Services", href: "#services" },
   { label: "About", href: "#about" },
+  { label: "Insights", href: "/blog" },
   { label: "Pricing", href: "#pricing" },
   { label: "Contact", href: "#contact" },
 ];
 
-export default function Navbar() {
+/** On sub-pages, hash links must point back to the landing page. */
+function resolveHref(href: string, onHome: boolean): string {
+  if (!href.startsWith("#")) return href;
+  return onHome ? href : `/${href}`;
+}
+
+export default function Navbar({ solid = false }: { solid?: boolean }) {
+  const pathname = usePathname();
+  const onHome = pathname === "/";
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
+    if (!onHome) return;
     const onScroll = () => {
       setScrolled(window.scrollY > 40);
 
       // Active section detection
-      const sections = navLinks.map((l) => l.href.replace("#", ""));
+      const sections = navLinks
+        .filter((l) => l.href.startsWith("#"))
+        .map((l) => l.href.replace("#", ""));
       for (const id of [...sections].reverse()) {
         const el = document.getElementById(id);
         if (el && window.scrollY >= el.offsetTop - 120) {
@@ -36,7 +49,7 @@ export default function Navbar() {
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [onHome]);
 
   // Close mobile menu on resize to desktop
   useEffect(() => {
@@ -47,7 +60,7 @@ export default function Navbar() {
     return () => window.removeEventListener("resize", onResize);
   }, []);
 
-  const isLight = scrolled;
+  const isLight = solid || scrolled;
 
   return (
     <>
@@ -64,7 +77,7 @@ export default function Navbar() {
           <div className="flex items-center justify-between h-16 lg:h-20">
 
             {/* ── Logo ── */}
-            <Link href="#home" className="flex items-center gap-3 group shrink-0">
+            <Link href={resolveHref("#home", onHome)} className="flex items-center gap-3 group shrink-0">
               <div className="relative w-9 h-9 shrink-0">
                 <Image
                   src="/ca-india-logo.png"
@@ -98,12 +111,14 @@ export default function Navbar() {
             {/* ── Desktop Nav ── */}
             <nav className="hidden md:flex items-center gap-6 lg:gap-8">
               {navLinks.map((link) => {
-                const id = link.href.replace("#", "");
-                const isActive = activeSection === id;
+                const isPage = link.href.startsWith("/");
+                const isActive = isPage
+                  ? pathname.startsWith(link.href)
+                  : onHome && activeSection === link.href.replace("#", "");
                 return (
                   <Link
                     key={link.label}
-                    href={link.href}
+                    href={resolveHref(link.href, onHome)}
                     className={cn(
                       "text-sm font-medium relative py-1 transition-colors duration-200 group",
                       isLight
@@ -157,12 +172,16 @@ export default function Navbar() {
                 </a>
               </div>
               <Link
-                href="#contact"
+                href={resolveHref("#contact", onHome)}
                 className={cn(
                   buttonVariants({ size: "sm" }),
                   "font-semibold px-5 rounded-lg text-sm hover:opacity-90 transition-opacity"
                 )}
-                style={{ backgroundColor: "var(--navy)", borderColor: "var(--navy)", color: "white" }}
+                style={
+                  isLight
+                    ? { backgroundColor: "var(--navy)", borderColor: "var(--navy)", color: "white" }
+                    : { backgroundColor: "var(--gold)", borderColor: "var(--gold)", color: "var(--navy)" }
+                }
               >
                 Book Free Consultation
               </Link>
@@ -201,12 +220,14 @@ export default function Navbar() {
           <div className="border-t shadow-xl" style={{ backgroundColor: "#FFFEF5", borderColor: "rgba(212,175,55,0.2)" }}>
             <nav className="max-w-7xl mx-auto px-4 py-3 flex flex-col">
               {navLinks.map((link) => {
-                const id = link.href.replace("#", "");
-                const isActive = activeSection === id;
+                const isPage = link.href.startsWith("/");
+                const isActive = isPage
+                  ? pathname.startsWith(link.href)
+                  : onHome && activeSection === link.href.replace("#", "");
                 return (
                   <Link
                     key={link.label}
-                    href={link.href}
+                    href={resolveHref(link.href, onHome)}
                     onClick={() => setMobileOpen(false)}
                     className={cn(
                       "text-sm font-medium py-3 px-3 rounded-lg flex items-center justify-between transition-colors",
@@ -245,7 +266,7 @@ export default function Navbar() {
                   <span>Tax / Audit: +91 99678 39778</span>
                 </a>
                 <Link
-                  href="#contact"
+                  href={resolveHref("#contact", onHome)}
                   onClick={() => setMobileOpen(false)}
                   className={cn(
                     buttonVariants({ size: "default" }),

@@ -1,4 +1,4 @@
-import { Badge } from "@/components/ui/badge";
+import SectionHeading from "@/components/SectionHeading";
 
 type Service = {
   title: string;
@@ -115,67 +115,48 @@ const services: Service[] = [
 
 export default function Services() {
   return (
-    <section id="services" className="py-20 lg:py-28" style={{ backgroundColor: "#F5F0DC" }}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="services" className="py-20 lg:py-28" style={{ backgroundColor: "#FFFEF8" }}>
+      <div className="max-w-6xl mx-auto px-5 sm:px-8">
         {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <Badge
-            className="mb-4 text-xs font-semibold px-3 py-1 rounded-full border"
-            style={{
-              backgroundColor: "rgba(212,175,55,0.12)",
-              borderColor: "rgba(206,137,70,0.35)",
-              color: "var(--navy)",
-            }}
-          >
-            What We Offer
-          </Badge>
-          <h2
-            className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 leading-tight"
-            style={{ color: "var(--navy)" }}
-          >
-            Our Services
-          </h2>
-          <div
-            className="w-14 h-1 rounded-full mx-auto mb-5"
-            style={{ backgroundColor: "var(--gold)" }}
+        <div className="mb-14">
+          <SectionHeading
+            kicker="What we do"
+            title="Everything your numbers need, under one roof"
+            lead="Full-spectrum tax, compliance and advisory work — trusted by 500+ businesses, professionals and families across India."
           />
-          <p className="text-gray-500 text-base sm:text-lg leading-relaxed">
-            Full-spectrum financial and compliance services trusted by 500+
-            businesses and professionals across India.
-          </p>
         </div>
 
-        {/* Service Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Service list — paper panels with a hairline, not a shadow-card kit */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px rounded-xl overflow-hidden"
+          style={{ backgroundColor: "rgba(44,20,8,0.1)" }}>
           {services.map((service) => (
             <div
               key={service.title}
-              className="group rounded-xl border p-7 hover:shadow-lg hover:-translate-y-1 transition-all duration-250 cursor-default"
-              style={{ backgroundColor: "#FFFEF5", borderColor: "rgba(212,175,55,0.2)" }}
+              className="group p-7 lg:p-8 transition-colors duration-200"
+              style={{ backgroundColor: "#FFFEF8" }}
             >
-              {/* Icon */}
-              <div
-                className="w-12 h-12 rounded-lg flex items-center justify-center mb-5 text-white transition-transform group-hover:scale-105"
-                style={{ backgroundColor: service.accent }}
-              >
-                {service.icon}
+              <div className="flex items-center gap-3 mb-5">
+                <div
+                  className="w-11 h-11 rounded-lg flex items-center justify-center text-white shrink-0"
+                  style={{ backgroundColor: service.accent }}
+                >
+                  {service.icon}
+                </div>
+                <h3
+                  className="font-heading font-medium text-xl leading-tight"
+                  style={{ color: "var(--navy)" }}
+                >
+                  {service.title}
+                </h3>
               </div>
 
-              {/* Title & Description */}
-              <h3
-                className="font-heading font-semibold text-lg mb-2"
-                style={{ color: "var(--navy)" }}
-              >
-                {service.title}
-              </h3>
-              <p className="text-sm text-gray-500 leading-relaxed mb-5">
+              <p className="text-[15px] text-[#6B5938] leading-relaxed mb-5">
                 {service.description}
               </p>
 
-              {/* Items */}
               <ul className="space-y-2.5">
                 {service.items.map((item) => (
-                  <li key={item} className="flex items-start gap-2.5 text-sm text-gray-600">
+                  <li key={item} className="flex items-start gap-2.5 text-sm text-[#5A4327]">
                     <span
                       className="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
                       style={{ backgroundColor: "var(--gold)" }}
@@ -184,12 +165,6 @@ export default function Services() {
                   </li>
                 ))}
               </ul>
-
-              {/* Hover bottom accent */}
-              <div
-                className="mt-6 h-0.5 w-0 group-hover:w-full rounded-full transition-all duration-300"
-                style={{ backgroundColor: service.accent, opacity: 0.4 }}
-              />
             </div>
           ))}
         </div>

@@ -1,4 +1,4 @@
-import { Badge } from "@/components/ui/badge";
+import SectionHeading from "@/components/SectionHeading";
 
 const steps = [
   {
@@ -61,118 +61,52 @@ const steps = [
 
 export default function Process() {
   return (
-    <section id="process" className="py-20 lg:py-28" style={{ backgroundColor: "#FFFEF5" }}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="process" className="py-20 lg:py-28" style={{ backgroundColor: "#F6F1E2" }}>
+      <div className="max-w-6xl mx-auto px-5 sm:px-8">
         {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <Badge
-            className="mb-4 text-xs font-semibold px-3 py-1 rounded-full border"
-            style={{
-              backgroundColor: "rgba(212,175,55,0.12)",
-              borderColor: "rgba(206,137,70,0.35)",
-              color: "var(--navy)",
-            }}
-          >
-            How We Work
-          </Badge>
-          <h2
-            className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 leading-tight"
-            style={{ color: "var(--navy)" }}
-          >
-            Our Simple 5-Step Process
-          </h2>
-          <div
-            className="w-14 h-1 rounded-full mx-auto mb-5"
-            style={{ backgroundColor: "var(--gold)" }}
+        <div className="mb-16">
+          <SectionHeading
+            kicker="How we work"
+            title="From your first call to filed and done"
+            lead="A structured, transparent engagement — you always know what's happening, what's next, and who to call."
           />
-          <p className="text-gray-500 text-base sm:text-lg leading-relaxed">
-            From your first call to ongoing compliance — a structured, transparent
-            process every step of the way.
-          </p>
         </div>
 
-        {/* Desktop: horizontal flow */}
+        {/* Desktop: numbered columns with a hairline rule */}
         <div className="hidden lg:block">
-          <div className="relative">
-            {/* Connecting dashed line */}
-            <div
-              className="absolute top-10 left-[10%] right-[10%] h-px border-t-2 border-dashed"
-              style={{ borderColor: "rgba(212,175,55,0.4)" }}
-            />
-
-            <div className="grid grid-cols-5 gap-4">
-              {steps.map((step, i) => (
-                <div key={step.number} className="flex flex-col items-center text-center group">
-                  {/* Circle */}
-                  <div
-                    className="relative w-20 h-20 rounded-full flex items-center justify-center mb-6 border-2 bg-white shadow-sm group-hover:shadow-md transition-shadow z-10"
-                    style={{ borderColor: i === 0 ? "var(--gold)" : "rgba(212,175,55,0.4)" }}
-                  >
-                    <div
-                      className="w-12 h-12 rounded-full flex items-center justify-center text-white"
-                      style={{ backgroundColor: "var(--navy)" }}
-                    >
-                      {step.icon}
-                    </div>
-                    {/* Step number badge */}
-                    <span
-                      className="absolute -top-2 -right-1 w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-bold text-white"
-                      style={{ backgroundColor: "var(--gold)" }}
-                    >
-                      {i + 1}
-                    </span>
-                  </div>
-
-                  <h3
-                    className="font-heading font-semibold text-sm mb-2 leading-tight"
-                    style={{ color: "var(--navy)" }}
-                  >
-                    {step.title}
-                  </h3>
-                  <p className="text-xs text-gray-500 leading-relaxed">{step.description}</p>
+          <div className="h-px rule-gold mb-8" />
+          <div className="grid grid-cols-5 gap-8">
+            {steps.map((step) => (
+              <div key={step.number}>
+                <div className="font-heading font-semibold text-5xl nums mb-4 text-[#2C1408]">
+                  {step.number}
+                  <span className="text-[var(--gold)]">.</span>
                 </div>
-              ))}
-            </div>
+                <h3 className="font-heading font-medium text-lg mb-2 leading-tight text-[#2C1408]">
+                  {step.title}
+                </h3>
+                <p className="text-sm text-[#6B5938] leading-relaxed">{step.description}</p>
+              </div>
+            ))}
           </div>
         </div>
 
-        {/* Mobile: vertical list */}
-        <div className="lg:hidden flex flex-col gap-0">
+        {/* Mobile: numbered rows */}
+        <div className="lg:hidden flex flex-col">
           {steps.map((step, i) => (
-            <div key={step.number} className="flex gap-5 relative">
-              {/* Left: icon + connector */}
-              <div className="flex flex-col items-center">
-                <div
-                  className="w-12 h-12 rounded-full flex items-center justify-center text-white shrink-0"
-                  style={{ backgroundColor: "var(--navy)" }}
-                >
-                  {step.icon}
-                </div>
-                {i < steps.length - 1 && (
-                  <div
-                    className="w-px flex-1 my-2 min-h-[32px]"
-                    style={{ backgroundColor: "rgba(212,175,55,0.35)" }}
-                  />
-                )}
+            <div
+              key={step.number}
+              className="flex gap-5 py-6"
+              style={{ borderTop: i === 0 ? "none" : "1px solid rgba(44,20,8,0.1)" }}
+            >
+              <div className="font-heading font-semibold text-3xl nums text-[#2C1408] shrink-0 w-12">
+                {step.number}
               </div>
-
-              {/* Right: content */}
-              <div className="pb-8 pt-1">
-                <div className="flex items-center gap-2 mb-1.5">
-                  <span
-                    className="text-xs font-bold rounded px-1.5 py-0.5"
-                    style={{ backgroundColor: "rgba(212,175,55,0.15)", color: "var(--gold)" }}
-                  >
-                    {step.number}
-                  </span>
-                  <h3
-                    className="font-heading font-semibold text-base"
-                    style={{ color: "var(--navy)" }}
-                  >
-                    {step.title}
-                  </h3>
-                </div>
-                <p className="text-sm text-gray-500 leading-relaxed">{step.description}</p>
+              <div>
+                <h3 className="font-heading font-medium text-lg mb-1.5 text-[#2C1408]">
+                  {step.title}
+                </h3>
+                <p className="text-sm text-[#6B5938] leading-relaxed">{step.description}</p>
               </div>
             </div>
           ))}

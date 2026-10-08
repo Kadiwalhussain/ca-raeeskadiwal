@@ -1,4 +1,4 @@
-import { Badge } from "@/components/ui/badge";
+import SectionHeading from "@/components/SectionHeading";
 
 const reasons = [
   {
@@ -75,79 +75,43 @@ export default function WhyChooseUs() {
       id="why-us"
       className="py-20 lg:py-28 relative overflow-hidden"
       style={{
-        background: "linear-gradient(160deg, #1A0800 0%, #2C1408 40%, #4D2F0E 70%, #2C1408 100%)",
+        background: "linear-gradient(160deg, #170902 0%, #2C1408 60%, #3A2410 100%)",
       }}
     >
-      {/* Dot grid overlay */}
-      <div
-        className="absolute inset-0 opacity-[0.035] pointer-events-none"
-        style={{
-          backgroundImage: "radial-gradient(circle at 1px 1px, white 1px, transparent 0)",
-          backgroundSize: "36px 36px",
-        }}
-      />
+      <div className="absolute top-0 left-0 right-0 h-px" style={{ backgroundColor: "rgba(212,175,55,0.35)" }} />
 
-      {/* Gold accent line */}
-      <div className="absolute top-0 left-0 right-0 h-px" style={{ backgroundColor: "rgba(212,175,55,0.4)" }} />
-
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative max-w-6xl mx-auto px-5 sm:px-8">
         {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <Badge
-            className="mb-4 text-xs font-semibold px-3 py-1 rounded-full border"
-            style={{
-              backgroundColor: "rgba(212,175,55,0.15)",
-              borderColor: "rgba(212,175,55,0.45)",
-              color: "var(--gold-light)",
-            }}
-          >
-            Why Clients Trust Us
-          </Badge>
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
-            Why Choose{" "}
-            <span style={{ color: "var(--gold)" }}>Raees Kadiwal &amp; Co.</span>?
-          </h2>
-          <div
-            className="w-14 h-1 rounded-full mx-auto mb-5"
-            style={{ backgroundColor: "var(--gold)" }}
+        <div className="mb-14">
+          <SectionHeading
+            onDark
+            kicker="Why clients stay"
+            title="The reasons 500+ clients don't shop around"
+            lead="They stay because we deliver outcomes, not just reports — and because the person who knows their file is the person who answers the phone."
           />
-          <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
-            500+ businesses and professionals across India choose us because we
-            deliver results — not just reports.
-          </p>
         </div>
 
-        {/* Reason cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Reasons — hairline ledger grid */}
+        <div
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px rounded-xl overflow-hidden"
+          style={{ backgroundColor: "rgba(212,175,55,0.14)" }}
+        >
           {reasons.map((r) => (
             <div
               key={r.title}
-              className="group relative rounded-xl p-7 border border-white/10 hover:border-white/20 bg-white/5 hover:bg-white/8 backdrop-blur-sm transition-all duration-250"
+              className="p-7 lg:p-8"
+              style={{ backgroundColor: "#241207" }}
             >
-              {/* Gold top line on hover */}
-              <div
-                className="absolute top-0 left-6 right-6 h-px opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"
-                style={{ backgroundColor: "var(--gold)" }}
-              />
-
-              <div className="flex items-start gap-4 mb-4">
-                <div
-                  className="w-12 h-12 rounded-lg flex items-center justify-center shrink-0 text-white"
-                  style={{ backgroundColor: "rgba(212,175,55,0.18)", color: "var(--gold)" }}
+              <div className="flex items-baseline gap-3 mb-3">
+                <span
+                  className="font-heading font-semibold text-3xl leading-none nums"
+                  style={{ color: "var(--gold)" }}
                 >
-                  {r.icon}
-                </div>
-                <div>
-                  <div
-                    className="font-heading font-bold text-2xl leading-none mb-0.5"
-                    style={{ color: "var(--gold)" }}
-                  >
-                    {r.stat}
-                  </div>
-                  <div className="font-heading font-semibold text-white text-sm">{r.title}</div>
-                </div>
+                  {r.stat}
+                </span>
+                <span className="font-heading font-medium text-white text-[15px]">{r.title}</span>
               </div>
-              <p className="text-sm text-gray-400 leading-relaxed">{r.description}</p>
+              <p className="text-sm text-[#B7A585] leading-relaxed">{r.description}</p>
             </div>
           ))}
         </div>

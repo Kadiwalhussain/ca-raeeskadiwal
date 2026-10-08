@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef } from "react";
-import { Badge } from "@/components/ui/badge";
+import SectionHeading from "@/components/SectionHeading";
 import { cn } from "@/lib/utils";
 
 const SERVICES = [
@@ -192,6 +192,7 @@ export default function Contact() {
   const [errors, setErrors] = useState<FormErrors>({});
   const [touched, setTouched] = useState<Partial<Record<keyof FormData, boolean>>>({});
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+  const [serverError, setServerError] = useState<string>("");
   const formRef = useRef<HTMLFormElement>(null);
 
   const handleChange = (
@@ -224,6 +225,7 @@ export default function Contact() {
     if (Object.keys(newErrors).length > 0) return;
 
     setStatus("submitting");
+    setServerError("");
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
@@ -233,42 +235,30 @@ export default function Contact() {
       if (res.ok) {
         setStatus("success");
       } else {
+        const data = await res.json().catch(() => null);
+        setServerError(data?.error ?? `Request failed (${res.status})`);
         setStatus("error");
-        setTimeout(() => setStatus("idle"), 4000);
+        setTimeout(() => setStatus("idle"), 6000);
       }
     } catch {
+      setServerError("Couldn't reach the server. Check your connection and try again.");
       setStatus("error");
-      setTimeout(() => setStatus("idle"), 4000);
+      setTimeout(() => setStatus("idle"), 6000);
     }
   };
 
   return (
-    <section id="contact" className="py-20 lg:py-28" style={{ backgroundColor: "#F5F0DC" }}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="py-20 lg:py-28" style={{ backgroundColor: "#FFFEF8" }}>
+      <div className="max-w-6xl mx-auto px-5 sm:px-8">
 
         {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <Badge
-            className="mb-4 text-xs font-semibold px-3 py-1 rounded-full border"
-            style={{
-              backgroundColor: "rgba(212,175,55,0.12)",
-              borderColor: "rgba(206,137,70,0.35)",
-              color: "var(--navy)",
-            }}
-          >
-            Let&apos;s Connect
-          </Badge>
-          <h2
-            className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 leading-tight"
-            style={{ color: "var(--navy)" }}
-          >
-            Book Your Free Consultation
-          </h2>
-          <div className="w-14 h-1 rounded-full mx-auto mb-5" style={{ backgroundColor: "var(--gold)" }} />
-          <p className="text-gray-500 text-base sm:text-lg leading-relaxed">
-            Talk to a qualified CA today — no commitment, no charges. We&apos;ll
-            help you understand exactly what you need.
-          </p>
+        <div className="mb-14 text-center">
+          <SectionHeading
+            align="center"
+            kicker="Start here"
+            title="Book your free consultation"
+            lead="Talk to a qualified CA — no commitment, no charges. We'll tell you exactly what you need, and what it will cost, before you decide anything."
+          />
         </div>
 
         <div className="grid lg:grid-cols-5 gap-10 lg:gap-14 items-start">
@@ -520,7 +510,7 @@ export default function Contact() {
                         <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
-                        Something went wrong. Please try again or contact us via WhatsApp.
+                        {serverError || "Something went wrong. Please try again or contact us via WhatsApp."}
                       </div>
                     )}
 

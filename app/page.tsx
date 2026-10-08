@@ -8,6 +8,7 @@ import Process from "@/sections/Process";
 import About from "@/sections/About";
 import Testimonials from "@/sections/Testimonials";
 import Pricing from "@/sections/Pricing";
+import Insights from "@/sections/Insights";
 import Contact from "@/sections/Contact";
 
 export default function Home() {
@@ -22,6 +23,7 @@ export default function Home() {
         <About />
         <Testimonials />
         <Pricing />
+        <Insights />
         <Contact />
       </main>
       <Footer />

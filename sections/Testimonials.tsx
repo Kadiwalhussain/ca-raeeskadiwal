@@ -1,4 +1,4 @@
-import { Badge } from "@/components/ui/badge";
+import SectionHeading from "@/components/SectionHeading";
 
 type Testimonial = {
   name: string;
@@ -83,63 +83,30 @@ function StarRating({ count }: { count: number }) {
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="py-20 lg:py-28" style={{ backgroundColor: "#F5F0DC" }}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="testimonials" className="py-20 lg:py-28" style={{ backgroundColor: "#F6F1E2" }}>
+      <div className="max-w-6xl mx-auto px-5 sm:px-8">
         {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <Badge
-            className="mb-4 text-xs font-semibold px-3 py-1 rounded-full border"
-            style={{
-              backgroundColor: "rgba(212,175,55,0.12)",
-              borderColor: "rgba(206,137,70,0.35)",
-              color: "var(--navy)",
-            }}
-          >
-            Client Stories
-          </Badge>
-          <h2
-            className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 leading-tight"
-            style={{ color: "var(--navy)" }}
-          >
-            What Our Clients Say
-          </h2>
-          <div
-            className="w-14 h-1 rounded-full mx-auto mb-5"
-            style={{ backgroundColor: "var(--gold)" }}
+        <div className="mb-14">
+          <SectionHeading
+            kicker="In their words"
+            title="The kind of relationship clients don't switch out of"
+            lead="Businesses, professionals and NRIs on why they've stayed with us — some for well over a decade."
           />
-          <p className="text-gray-500 text-base sm:text-lg leading-relaxed">
-            Trusted by businesses, professionals, and NRIs — here is what they
-            experience working with us.
-          </p>
         </div>
 
-        {/* Grid */}
+        {/* Masonry-ish columns of quote cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {testimonials.map((t) => (
-            <div
+            <figure
               key={t.name}
-              className="rounded-xl border p-7 hover:shadow-md transition-shadow duration-200 flex flex-col"
-              style={{ backgroundColor: "#FFFEF5", borderColor: "rgba(212,175,55,0.2)" }}
+              className="rounded-xl p-7 flex flex-col"
+              style={{ backgroundColor: "#FFFEF8", border: "1px solid rgba(212,175,55,0.22)" }}
             >
-              {/* Quote mark */}
-              <div
-                className="text-5xl font-serif leading-none mb-4 select-none"
-                style={{ color: "rgba(212,175,55,0.35)" }}
-              >
-                &ldquo;
-              </div>
-
-              {/* Stars */}
               <StarRating count={t.rating} />
-
-              {/* Text */}
-              <p className="text-sm text-gray-600 leading-relaxed mt-4 flex-1">{t.text}</p>
-
-              {/* Divider */}
-              <div className="my-5 border-t" style={{ borderColor: "rgba(212,175,55,0.2)" }} />
-
-              {/* Author */}
-              <div className="flex items-center gap-3">
+              <blockquote className="font-heading text-[17px] leading-[1.6] text-[#2C1408] mt-4 flex-1">
+                {t.text}
+              </blockquote>
+              <figcaption className="flex items-center gap-3 mt-6 pt-5" style={{ borderTop: "1px solid rgba(212,175,55,0.22)" }}>
                 <div
                   className="w-10 h-10 rounded-full flex items-center justify-center text-white font-heading font-semibold text-sm shrink-0"
                   style={{ backgroundColor: t.color }}
@@ -147,40 +114,32 @@ export default function Testimonials() {
                   {t.initials}
                 </div>
                 <div>
-                  <div
-                    className="font-heading font-semibold text-sm"
-                    style={{ color: "var(--navy)" }}
-                  >
-                    {t.name}
-                  </div>
-                  <div className="text-xs text-gray-400">
-                    {t.role} · {t.company}
+                  <div className="font-medium text-sm text-[#2C1408]">{t.name}</div>
+                  <div className="text-xs text-[#8C7B57]">
+                    {t.role}, {t.company}
                   </div>
                 </div>
-              </div>
-            </div>
+              </figcaption>
+            </figure>
           ))}
         </div>
 
-        {/* Trust strip */}
+        {/* Trust strip — ledger of proof */}
         <div
-          className="mt-14 rounded-xl p-8 flex flex-col sm:flex-row items-center justify-between gap-6"
-          style={{ backgroundColor: "rgba(212,175,55,0.1)", border: "1px solid rgba(212,175,55,0.2)" }}
+          className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-px rounded-xl overflow-hidden"
+          style={{ backgroundColor: "rgba(44,20,8,0.1)" }}
         >
           {[
-            { num: "500+", label: "Happy Clients" },
-            { num: "4.9/5", label: "Average Rating" },
-            { num: "17+", label: "Years Trusted" },
-            { num: "Pan-India", label: "Client Coverage" },
+            { num: "500+", label: "Clients served" },
+            { num: "4.9/5", label: "Average rating" },
+            { num: "17+", label: "Years trusted" },
+            { num: "Pan-India", label: "Client coverage" },
           ].map((item) => (
-            <div key={item.label} className="text-center">
-              <div
-                className="font-heading font-bold text-2xl sm:text-3xl mb-1"
-                style={{ color: "var(--navy)" }}
-              >
+            <div key={item.label} className="text-center py-7" style={{ backgroundColor: "#FFFEF8" }}>
+              <div className="font-heading font-semibold text-2xl sm:text-3xl mb-1 text-[#2C1408] nums">
                 {item.num}
               </div>
-              <div className="text-xs text-gray-500 font-medium">{item.label}</div>
+              <div className="text-xs text-[#8C7B57] font-medium">{item.label}</div>
             </div>
           ))}
         </div>
