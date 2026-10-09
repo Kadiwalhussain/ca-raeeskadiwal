@@ -83,7 +83,7 @@ function StarRating({ count }: { count: number }) {
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="py-20 lg:py-28" style={{ backgroundColor: "#EDF0F3" }}>
+    <section id="testimonials" className="py-20 lg:py-28" style={{ backgroundColor: "#FFFFFF" }}>
       <div className="max-w-6xl mx-auto px-5 sm:px-8">
         {/* Header */}
         <div className="mb-14">

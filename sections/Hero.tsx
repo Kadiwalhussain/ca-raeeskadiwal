@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const ledger = [
   { value: "17", suffix: "+", label: "Years in practice" },
@@ -12,11 +13,27 @@ export default function Hero() {
     <section
       id="home"
       className="relative flex items-center overflow-hidden"
-      style={{
-        background:
-          "linear-gradient(150deg, #141821 0%, #1F2430 55%, #2B323E 100%)",
-      }}
+      style={{ backgroundColor: "#141821" }}
     >
+      {/* Background photograph — financial district */}
+      <Image
+        src="/images/hero-skyline.jpg"
+        alt=""
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover object-center"
+      />
+      {/* Slate overlay for legibility */}
+      <div
+        aria-hidden
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(110deg, rgba(15,18,26,0.96) 0%, rgba(20,24,33,0.88) 45%, rgba(31,36,48,0.72) 100%)",
+        }}
+      />
+
       {/* Fine engraved frame — like the border of a share certificate */}
       <div
         aria-hidden

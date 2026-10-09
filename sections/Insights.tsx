@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { getAllPosts, formatPostDate } from "@/lib/blog";
 
 export default function Insights() {
@@ -42,11 +43,17 @@ export default function Insights() {
             >
               <Link
                 href={`/blog/${post.slug}`}
-                className="group grid sm:grid-cols-[auto_1fr_auto] gap-x-8 gap-y-2 py-7 items-baseline"
+                className="group grid sm:grid-cols-[120px_1fr_auto] gap-5 sm:gap-7 py-7 items-center"
               >
-                <span className="font-heading text-lg text-[#AEB6C1] nums w-8">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
+                <div className="relative aspect-[16/10] rounded-lg overflow-hidden bg-[#E3E7EC]">
+                  <Image
+                    src={post.cover}
+                    alt=""
+                    fill
+                    sizes="120px"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
                 <div>
                   <div className="flex items-center gap-3 mb-2 text-[13px] text-[#78828F]">
                     <span className="font-semibold text-[var(--caramel)]">{post.category}</span>

@@ -61,7 +61,7 @@ const steps = [
 
 export default function Process() {
   return (
-    <section id="process" className="py-20 lg:py-28" style={{ backgroundColor: "#EDF0F3" }}>
+    <section id="process" className="py-20 lg:py-28" style={{ backgroundColor: "#FFFFFF" }}>
       <div className="max-w-6xl mx-auto px-5 sm:px-8">
         {/* Header */}
         <div className="mb-16">

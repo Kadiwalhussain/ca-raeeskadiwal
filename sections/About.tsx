@@ -1,3 +1,4 @@
+import Image from "next/image";
 import SectionHeading from "@/components/SectionHeading";
 
 const pillars = [
@@ -52,14 +53,25 @@ const expertise = [
 
 export default function About() {
   return (
-    <section id="about" className="py-20 lg:py-28" style={{ backgroundColor: "#FFFFFF" }}>
+    <section id="about" className="py-20 lg:py-28" style={{ backgroundColor: "#EDF0F3" }}>
       <div className="max-w-6xl mx-auto px-5 sm:px-8">
         {/* Header */}
-        <div className="mb-16">
+        <div className="mb-12">
           <SectionHeading
             kicker="Who we are"
             title="A Mumbai practice that has grown up with its clients"
             lead="Since 2007, Raees Kadiwal & Co. has looked after the tax, compliance and advisory needs of businesses, professionals and families across India. We pair deep regulatory knowledge with plain-spoken advice — the kind you can actually act on."
+          />
+        </div>
+
+        {/* Office image */}
+        <div className="relative aspect-[21/8] rounded-xl overflow-hidden mb-14 bg-[#E3E7EC]">
+          <Image
+            src="/images/office.jpg"
+            alt="Our practice"
+            fill
+            sizes="(max-width: 1152px) 100vw, 1152px"
+            className="object-cover object-center"
           />
         </div>
 

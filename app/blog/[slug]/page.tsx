@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -136,6 +137,20 @@ export default async function ArticlePage({
             </p>
           </div>
         </header>
+
+        {/* Cover image */}
+        <div className="max-w-4xl mx-auto px-5 sm:px-8 -mt-6 lg:-mt-8">
+          <div className="relative aspect-[21/9] rounded-xl overflow-hidden shadow-sm bg-[#E3E7EC]">
+            <Image
+              src={post.cover}
+              alt=""
+              fill
+              priority
+              sizes="(max-width: 896px) 100vw, 896px"
+              className="object-cover"
+            />
+          </div>
+        </div>
 
         {/* Body */}
         <article className="max-w-2xl mx-auto px-5 sm:px-8 py-14">

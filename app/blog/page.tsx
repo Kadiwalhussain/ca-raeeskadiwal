@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -48,22 +49,31 @@ export default function BlogIndex() {
           <section className="max-w-5xl mx-auto px-5 sm:px-8 pb-14">
             <Link
               href={`/blog/${featured.slug}`}
-              className="group block rounded-xl overflow-hidden"
+              className="group grid md:grid-cols-2 rounded-xl overflow-hidden"
               style={{ backgroundColor: "#1F2430" }}
             >
-              <div className="p-8 sm:p-12">
+              <div className="relative min-h-[240px] md:min-h-full overflow-hidden">
+                <Image
+                  src={featured.cover}
+                  alt=""
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <div className="p-8 sm:p-10 lg:p-12">
                 <div className="flex items-center gap-3 mb-5 text-[#C8D0DB] text-sm">
                   <span className="font-semibold">{featured.category}</span>
                   <span className="opacity-40">·</span>
                   <span className="opacity-80">{formatPostDate(featured.date)}</span>
                 </div>
                 <h2
-                  className="font-heading font-medium text-white leading-[1.1] mb-4 max-w-3xl"
-                  style={{ fontSize: "clamp(1.6rem, 3.2vw, 2.5rem)" }}
+                  className="font-heading font-medium text-white leading-[1.12] mb-4"
+                  style={{ fontSize: "clamp(1.5rem, 2.8vw, 2.1rem)" }}
                 >
                   {featured.title}
                 </h2>
-                <p className="text-[#C3CCD8] text-base sm:text-lg leading-relaxed max-w-2xl mb-6">
+                <p className="text-[#C3CCD8] leading-relaxed mb-6">
                   {featured.excerpt}
                 </p>
                 <span className="inline-flex items-center gap-2 text-[#C8D0DB] font-semibold">
@@ -75,24 +85,35 @@ export default function BlogIndex() {
           </section>
         )}
 
-        {/* The rest — editorial list, not a card grid */}
+        {/* The rest — editorial list with thumbnails */}
         <section className="max-w-5xl mx-auto px-5 sm:px-8 pb-24">
           <ul>
             {rest.map((post) => (
               <li key={post.slug} style={{ borderTop: "1px solid rgba(31, 36, 48,0.12)" }}>
                 <Link
                   href={`/blog/${post.slug}`}
-                  className="group grid sm:grid-cols-[1fr_auto] gap-x-8 gap-y-3 py-8 items-start"
+                  className="group grid sm:grid-cols-[200px_1fr] gap-6 sm:gap-8 py-8 items-center"
                 >
+                  <div className="relative aspect-[16/10] rounded-lg overflow-hidden bg-[#E3E7EC]">
+                    <Image
+                      src={post.cover}
+                      alt=""
+                      fill
+                      sizes="200px"
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
                   <div>
                     <div className="flex items-center gap-3 mb-3 text-[13px] text-[#78828F]">
                       <span className="font-semibold text-[var(--caramel)]">{post.category}</span>
                       <span className="opacity-40">·</span>
                       <span>{formatPostDate(post.date)}</span>
+                      <span className="opacity-40">·</span>
+                      <span>{post.readingMinutes} min read</span>
                     </div>
                     <h3
                       className="font-heading font-medium text-[#1F2430] leading-snug mb-2"
-                      style={{ fontSize: "clamp(1.25rem, 2.4vw, 1.6rem)" }}
+                      style={{ fontSize: "clamp(1.2rem, 2.2vw, 1.5rem)" }}
                     >
                       <span className="bg-[linear-gradient(var(--gold),var(--gold))] bg-[length:0%_1.5px] bg-no-repeat bg-left-bottom transition-[background-size] duration-300 group-hover:bg-[length:100%_1.5px] pb-0.5">
                         {post.title}
@@ -101,9 +122,6 @@ export default function BlogIndex() {
                     <p className="text-[#55606E] leading-relaxed max-w-2xl">
                       {post.excerpt}
                     </p>
-                  </div>
-                  <div className="text-sm text-[#99A2AE] sm:text-right whitespace-nowrap sm:pt-9">
-                    {post.readingMinutes} min read
                   </div>
                 </Link>
               </li>

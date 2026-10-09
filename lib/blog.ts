@@ -18,6 +18,7 @@ export type Post = {
   author: string;
   date: string; // ISO
   readingMinutes: number;
+  cover: string;
   content: Block[];
 };
 
@@ -31,6 +32,7 @@ export const posts: Post[] = [
     author: "CA Raees Kadiwal",
     date: "2025-06-18",
     readingMinutes: 7,
+    cover: "/images/insight-itr.jpg",
     content: [
       { type: "p", text: "Filing your income tax return is less about the form and more about reconciling what you earned with what the department already knows. Thanks to the Annual Information Statement (AIS) and Form 26AS, most of your income is already visible to the tax office before you file. The job of a good return is to match that picture — and explain anything that does not." },
       { type: "h2", text: "When is the return due?" },
@@ -66,6 +68,7 @@ export const posts: Post[] = [
     author: "CA Raees Kadiwal",
     date: "2025-08-05",
     readingMinutes: 6,
+    cover: "/images/insight-gst.jpg",
     content: [
       { type: "p", text: "Whether you need GST registration is usually a question of turnover, but the answer has more nuance than the headline numbers suggest. Register too late and you face penalties; register when you did not need to and you take on monthly compliance you could have avoided." },
       { type: "h2", text: "The turnover thresholds" },
@@ -99,6 +102,7 @@ export const posts: Post[] = [
     author: "CA Raees Kadiwal",
     date: "2025-09-22",
     readingMinutes: 8,
+    cover: "/images/insight-nri.jpg",
     content: [
       { type: "p", text: "For Non-Resident Indians, almost every tax question comes back to one thing: your residential status for the year. Get that right and the rest follows logically. Get it wrong and you either overpay or invite a notice — both avoidable." },
       { type: "h2", text: "What India actually taxes for an NRI" },
@@ -122,6 +126,7 @@ export const posts: Post[] = [
     author: "CA Raees Kadiwal",
     date: "2026-01-14",
     readingMinutes: 7,
+    cover: "/images/insight-business.jpg",
     content: [
       { type: "p", text: "The structure you register in your first month quietly shapes the next several years — your compliance bill, how easily you can raise money, and how protected your personal assets are. There is no single best answer, only the right fit for where your business is going." },
       { type: "h2", text: "Private Limited Company" },
@@ -150,6 +155,7 @@ export const posts: Post[] = [
     author: "CA Raees Kadiwal",
     date: "2026-03-30",
     readingMinutes: 5,
+    cover: "/images/insight-tds.jpg",
     content: [
       { type: "p", text: "TDS is deceptively simple: when you pay certain expenses, you hold back a slice and deposit it with the government on the payee's behalf. The penalties for getting the timing wrong, though, are anything but simple — and they land on the business, not the payee." },
       { type: "h2", text: "Where a typical business has to deduct" },
