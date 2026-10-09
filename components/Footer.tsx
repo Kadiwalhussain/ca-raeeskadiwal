@@ -15,7 +15,6 @@ const quickLinks = [
   { label: "Services", href: "/#services" },
   { label: "About Us", href: "/#about" },
   { label: "Insights", href: "/blog" },
-  { label: "Pricing", href: "/#pricing" },
   { label: "Contact", href: "/#contact" },
 ];
 
@@ -58,13 +57,13 @@ export default function Footer() {
       {/* ── Pre-footer CTA strip ── */}
       <div
         className="border-b"
-        style={{ borderColor: "rgba(255,255,255,0.07)", backgroundColor: "#1A0800" }}
+        style={{ borderColor: "rgba(255,255,255,0.07)", backgroundColor: "#161A22" }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex flex-col sm:flex-row items-center justify-between gap-5">
           <div>
             <p
               className="font-heading font-bold text-lg sm:text-xl mb-1"
-              style={{ color: "var(--gold)" }}
+              style={{ color: "#C3CCD8" }}
             >
               Ready to simplify your finances?
             </p>
@@ -75,7 +74,7 @@ export default function Footer() {
           <Link
             href="/#contact"
             className="shrink-0 inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-sm transition-opacity hover:opacity-90"
-            style={{ backgroundColor: "var(--gold)", color: "var(--navy)" }}
+            style={{ backgroundColor: "#EEF1F4", color: "var(--navy)" }}
           >
             Book Free Consultation
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -86,7 +85,7 @@ export default function Footer() {
       </div>
 
       {/* Gold top border */}
-      <div className="h-px" style={{ backgroundColor: "rgba(212,175,55,0.4)" }} />
+      <div className="h-px" style={{ backgroundColor: "rgba(94, 110, 130,0.4)" }} />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
@@ -137,7 +136,7 @@ export default function Footer() {
           <div>
             <h4
               className="font-heading font-semibold text-xs mb-5 tracking-widest uppercase"
-              style={{ color: "var(--gold)" }}
+              style={{ color: "#C3CCD8" }}
             >
               Our Services
             </h4>
@@ -150,7 +149,7 @@ export default function Footer() {
                   >
                     <span
                       className="w-1 h-1 rounded-full shrink-0 group-hover:bg-[var(--gold)] transition-colors"
-                      style={{ backgroundColor: "rgba(212,175,55,0.5)" }}
+                      style={{ backgroundColor: "rgba(94, 110, 130,0.5)" }}
                     />
                     {s.label}
                   </Link>
@@ -163,7 +162,7 @@ export default function Footer() {
           <div>
             <h4
               className="font-heading font-semibold text-xs mb-5 tracking-widest uppercase"
-              style={{ color: "var(--gold)" }}
+              style={{ color: "#C3CCD8" }}
             >
               Quick Links
             </h4>
@@ -176,7 +175,7 @@ export default function Footer() {
                   >
                     <span
                       className="w-1 h-1 rounded-full shrink-0 group-hover:bg-[var(--gold)] transition-colors"
-                      style={{ backgroundColor: "rgba(212,175,55,0.5)" }}
+                      style={{ backgroundColor: "rgba(94, 110, 130,0.5)" }}
                     />
                     {l.label}
                   </Link>
@@ -189,7 +188,7 @@ export default function Footer() {
           <div>
             <h4
               className="font-heading font-semibold text-xs mb-5 tracking-widest uppercase"
-              style={{ color: "var(--gold)" }}
+              style={{ color: "#C3CCD8" }}
             >
               Contact
             </h4>

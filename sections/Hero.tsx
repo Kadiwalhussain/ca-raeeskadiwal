@@ -14,19 +14,19 @@ export default function Hero() {
       className="relative flex items-center overflow-hidden"
       style={{
         background:
-          "linear-gradient(150deg, #170902 0%, #2C1408 55%, #3A2410 100%)",
+          "linear-gradient(150deg, #141821 0%, #1F2430 55%, #2B323E 100%)",
       }}
     >
       {/* Fine engraved frame — like the border of a share certificate */}
       <div
         aria-hidden
         className="pointer-events-none absolute inset-4 sm:inset-6 rounded-[4px] hidden sm:block"
-        style={{ border: "1px solid rgba(212,175,55,0.16)" }}
+        style={{ border: "1px solid rgba(94, 110, 130,0.16)" }}
       />
       <div
         aria-hidden
         className="pointer-events-none absolute inset-6 sm:inset-8 rounded-[2px] hidden sm:block"
-        style={{ border: "1px solid rgba(212,175,55,0.08)" }}
+        style={{ border: "1px solid rgba(94, 110, 130,0.08)" }}
       />
 
       <div className="relative w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 py-28 lg:py-36">
@@ -36,7 +36,7 @@ export default function Hero() {
           <div className="lg:col-span-7">
             <div className="flex items-center gap-3 mb-8 animate-fade-up" style={{ animationDelay: "0.05s" }}>
               <span className="h-px w-10" style={{ backgroundColor: "var(--gold)" }} />
-              <span className="text-sm font-medium tracking-wide text-[#E6D9A8]">
+              <span className="text-sm font-medium tracking-wide text-[#C8D0DB]">
                 Raees Kadiwal &amp; Co., Chartered Accountants
               </span>
             </div>
@@ -54,7 +54,7 @@ export default function Hero() {
             </h1>
 
             <p
-              className="text-[15px] sm:text-lg leading-relaxed text-[#D8CBB0] max-w-xl mb-10 animate-fade-up"
+              className="text-[15px] sm:text-lg leading-relaxed text-[#C3CCD8] max-w-xl mb-10 animate-fade-up"
               style={{ animationDelay: "0.2s" }}
             >
               For over 17 years, individuals, founders and NRIs across India have
@@ -69,7 +69,7 @@ export default function Hero() {
               <Link
                 href="#contact"
                 className="inline-flex items-center justify-center rounded-md px-7 py-3.5 text-[15px] font-semibold transition-transform hover:-translate-y-0.5"
-                style={{ backgroundColor: "var(--gold)", color: "#2C1408" }}
+                style={{ backgroundColor: "#EEF1F4", color: "#1F2430" }}
               >
                 Book a free consultation
               </Link>
@@ -88,7 +88,7 @@ export default function Hero() {
             </div>
 
             <p
-              className="text-sm text-[#A8936A] animate-fade-up"
+              className="text-sm text-[#99A2AE] animate-fade-up"
               style={{ animationDelay: "0.36s" }}
             >
               ICAI-registered firm in Malad East, Mumbai · Serving clients Pan-India
@@ -100,7 +100,7 @@ export default function Hero() {
             <div
               className="relative rounded-lg p-8 sm:p-9"
               style={{
-                backgroundColor: "#F7F2E2",
+                backgroundColor: "#F7F9FB",
                 boxShadow: "0 30px 60px -20px rgba(0,0,0,0.55)",
               }}
             >
@@ -108,27 +108,27 @@ export default function Hero() {
               <div
                 aria-hidden
                 className="pointer-events-none absolute inset-3 rounded"
-                style={{ border: "1px solid rgba(44,20,8,0.12)" }}
+                style={{ border: "1px solid rgba(31, 36, 48,0.12)" }}
               />
 
               <div className="relative flex items-start justify-between mb-7">
                 <div>
-                  <div className="text-[11px] font-semibold tracking-[0.18em] text-[#A8936A] uppercase">
+                  <div className="text-[11px] font-semibold tracking-[0.18em] text-[#99A2AE] uppercase">
                     Established
                   </div>
                   <div
-                    className="font-heading text-5xl font-semibold text-[#2C1408] nums leading-none mt-1"
+                    className="font-heading text-5xl font-semibold text-[#1F2430] nums leading-none mt-1"
                   >
                     2007
                   </div>
                 </div>
                 {/* Gold seal */}
                 <svg width="66" height="66" viewBox="0 0 100 100" aria-hidden>
-                  <circle cx="50" cy="50" r="47" fill="none" stroke="#C9A227" strokeWidth="1.5" />
-                  <circle cx="50" cy="50" r="40" fill="none" stroke="#C9A227" strokeWidth="0.75" strokeDasharray="2 3" />
-                  <circle cx="50" cy="50" r="30" fill="#2C1408" />
-                  <text x="50" y="47" textAnchor="middle" fill="#C9A227" fontFamily="serif" fontSize="18" fontWeight="700">RK</text>
-                  <text x="50" y="62" textAnchor="middle" fill="#C9A227" fontFamily="serif" fontSize="7" letterSpacing="1">&amp; CO.</text>
+                  <circle cx="50" cy="50" r="47" fill="none" stroke="#5E6E82" strokeWidth="1.5" />
+                  <circle cx="50" cy="50" r="40" fill="none" stroke="#5E6E82" strokeWidth="0.75" strokeDasharray="2 3" />
+                  <circle cx="50" cy="50" r="30" fill="#1F2430" />
+                  <text x="50" y="47" textAnchor="middle" fill="#C8D0DB" fontFamily="serif" fontSize="18" fontWeight="700">RK</text>
+                  <text x="50" y="62" textAnchor="middle" fill="#C8D0DB" fontFamily="serif" fontSize="7" letterSpacing="1">&amp; CO.</text>
                 </svg>
               </div>
 
@@ -141,11 +141,11 @@ export default function Hero() {
                     className="flex items-baseline justify-between py-3.5"
                     style={{
                       borderBottom:
-                        i < ledger.length - 1 ? "1px solid rgba(44,20,8,0.08)" : "none",
+                        i < ledger.length - 1 ? "1px solid rgba(31, 36, 48,0.08)" : "none",
                     }}
                   >
-                    <dt className="text-sm text-[#6B5938]">{row.label}</dt>
-                    <dd className="font-heading text-2xl font-semibold text-[#2C1408] nums">
+                    <dt className="text-sm text-[#55606E]">{row.label}</dt>
+                    <dd className="font-heading text-2xl font-semibold text-[#1F2430] nums">
                       {row.value}
                       <span className="text-[var(--caramel)]">{row.suffix}</span>
                     </dd>

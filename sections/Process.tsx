@@ -61,7 +61,7 @@ const steps = [
 
 export default function Process() {
   return (
-    <section id="process" className="py-20 lg:py-28" style={{ backgroundColor: "#F6F1E2" }}>
+    <section id="process" className="py-20 lg:py-28" style={{ backgroundColor: "#EDF0F3" }}>
       <div className="max-w-6xl mx-auto px-5 sm:px-8">
         {/* Header */}
         <div className="mb-16">
@@ -78,14 +78,14 @@ export default function Process() {
           <div className="grid grid-cols-5 gap-8">
             {steps.map((step) => (
               <div key={step.number}>
-                <div className="font-heading font-semibold text-5xl nums mb-4 text-[#2C1408]">
+                <div className="font-heading font-semibold text-5xl nums mb-4 text-[#1F2430]">
                   {step.number}
                   <span className="text-[var(--gold)]">.</span>
                 </div>
-                <h3 className="font-heading font-medium text-lg mb-2 leading-tight text-[#2C1408]">
+                <h3 className="font-heading font-medium text-lg mb-2 leading-tight text-[#1F2430]">
                   {step.title}
                 </h3>
-                <p className="text-sm text-[#6B5938] leading-relaxed">{step.description}</p>
+                <p className="text-sm text-[#55606E] leading-relaxed">{step.description}</p>
               </div>
             ))}
           </div>
@@ -97,16 +97,16 @@ export default function Process() {
             <div
               key={step.number}
               className="flex gap-5 py-6"
-              style={{ borderTop: i === 0 ? "none" : "1px solid rgba(44,20,8,0.1)" }}
+              style={{ borderTop: i === 0 ? "none" : "1px solid rgba(31, 36, 48,0.1)" }}
             >
-              <div className="font-heading font-semibold text-3xl nums text-[#2C1408] shrink-0 w-12">
+              <div className="font-heading font-semibold text-3xl nums text-[#1F2430] shrink-0 w-12">
                 {step.number}
               </div>
               <div>
-                <h3 className="font-heading font-medium text-lg mb-1.5 text-[#2C1408]">
+                <h3 className="font-heading font-medium text-lg mb-1.5 text-[#1F2430]">
                   {step.title}
                 </h3>
-                <p className="text-sm text-[#6B5938] leading-relaxed">{step.description}</p>
+                <p className="text-sm text-[#55606E] leading-relaxed">{step.description}</p>
               </div>
             </div>
           ))}

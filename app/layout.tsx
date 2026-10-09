@@ -257,7 +257,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
 
         {/* Theme */}
-        <meta name="theme-color" content="#2C1408" />
+        <meta name="theme-color" content="#1F2430" />
 
         {/* Geo targeting */}
         <meta name="geo.region" content="IN-MH" />

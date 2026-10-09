@@ -75,10 +75,10 @@ export default function WhyChooseUs() {
       id="why-us"
       className="py-20 lg:py-28 relative overflow-hidden"
       style={{
-        background: "linear-gradient(160deg, #170902 0%, #2C1408 60%, #3A2410 100%)",
+        background: "linear-gradient(160deg, #141821 0%, #1F2430 60%, #2B323E 100%)",
       }}
     >
-      <div className="absolute top-0 left-0 right-0 h-px" style={{ backgroundColor: "rgba(212,175,55,0.35)" }} />
+      <div className="absolute top-0 left-0 right-0 h-px" style={{ backgroundColor: "rgba(94, 110, 130,0.35)" }} />
 
       <div className="relative max-w-6xl mx-auto px-5 sm:px-8">
         {/* Header */}
@@ -94,24 +94,24 @@ export default function WhyChooseUs() {
         {/* Reasons — hairline ledger grid */}
         <div
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px rounded-xl overflow-hidden"
-          style={{ backgroundColor: "rgba(212,175,55,0.14)" }}
+          style={{ backgroundColor: "rgba(94, 110, 130,0.14)" }}
         >
           {reasons.map((r) => (
             <div
               key={r.title}
               className="p-7 lg:p-8"
-              style={{ backgroundColor: "#241207" }}
+              style={{ backgroundColor: "#232832" }}
             >
               <div className="flex items-baseline gap-3 mb-3">
                 <span
                   className="font-heading font-semibold text-3xl leading-none nums"
-                  style={{ color: "var(--gold)" }}
+                  style={{ color: "#E4E8EE" }}
                 >
                   {r.stat}
                 </span>
                 <span className="font-heading font-medium text-white text-[15px]">{r.title}</span>
               </div>
-              <p className="text-sm text-[#B7A585] leading-relaxed">{r.description}</p>
+              <p className="text-sm text-[#AAB2BD] leading-relaxed">{r.description}</p>
             </div>
           ))}
         </div>

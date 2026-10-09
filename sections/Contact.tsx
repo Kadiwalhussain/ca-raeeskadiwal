@@ -139,7 +139,7 @@ const socialLinks = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
       </svg>
     ),
-    bg: "#D4AF37",
+    bg: "#5E6E82",
   },
 ];
 
@@ -178,7 +178,7 @@ const inputClass = (error?: string) =>
     "focus:ring-2 focus:ring-offset-0",
     error
       ? "border-red-300 bg-red-50/40 focus:border-red-400 focus:ring-red-200"
-      : "border-[rgba(212,175,55,0.3)] bg-[#FFFEF5] focus:border-[var(--gold)] focus:ring-[rgba(212,175,55,0.15)]"
+      : "border-[rgba(94, 110, 130,0.3)] bg-[#FFFFFF] focus:border-[var(--gold)] focus:ring-[rgba(94, 110, 130,0.15)]"
   );
 
 export default function Contact() {
@@ -248,7 +248,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 lg:py-28" style={{ backgroundColor: "#FFFEF8" }}>
+    <section id="contact" className="py-20 lg:py-28" style={{ backgroundColor: "#FFFFFF" }}>
       <div className="max-w-6xl mx-auto px-5 sm:px-8">
 
         {/* Header */}
@@ -272,7 +272,7 @@ export default function Contact() {
                 <div
                   key={item.label}
                   className="flex items-start gap-4 p-5 rounded-xl hover:shadow-sm transition-shadow"
-                  style={{ backgroundColor: "#FFFEF5", border: "1px solid rgba(212,175,55,0.2)" }}
+                  style={{ backgroundColor: "#FFFFFF", border: "1px solid rgba(94, 110, 130,0.2)" }}
                 >
                   <div
                     className="w-10 h-10 rounded-lg flex items-center justify-center shrink-0 text-white"
@@ -290,7 +290,7 @@ export default function Contact() {
                           <div key={m.href} className="flex items-center gap-2 flex-wrap">
                             <span
                               className="text-[10px] font-semibold px-1.5 py-0.5 rounded"
-                              style={{ backgroundColor: "rgba(212,175,55,0.15)", color: "var(--caramel)" }}
+                              style={{ backgroundColor: "rgba(94, 110, 130,0.15)", color: "var(--caramel)" }}
                             >
                               {m.tag}
                             </span>
@@ -347,7 +347,7 @@ export default function Contact() {
             </div>
 
             {/* Google Map embed — Fatima Tower */}
-            <div className="rounded-xl overflow-hidden shadow-sm h-56 lg:h-64" style={{ border: "1px solid rgba(212,175,55,0.25)" }}>
+            <div className="rounded-xl overflow-hidden shadow-sm h-56 lg:h-64" style={{ border: "1px solid rgba(94, 110, 130,0.25)" }}>
               <iframe
                 title="Raees Kadiwal & Co. — Chartered Accountants — Shop No. 10, Fatima Tower, Malad East, Mumbai"
                 src="https://maps.google.com/maps?q=19.1791743,72.8616513&hl=en&z=19&output=embed"
@@ -363,13 +363,13 @@ export default function Contact() {
 
           {/* ── Right: Contact Form ── */}
           <div className="lg:col-span-3">
-            <div className="rounded-2xl shadow-sm p-8 lg:p-10" style={{ backgroundColor: "#FFFEF5", border: "1px solid rgba(212,175,55,0.2)" }}>
+            <div className="rounded-2xl shadow-sm p-8 lg:p-10" style={{ backgroundColor: "#FFFFFF", border: "1px solid rgba(94, 110, 130,0.2)" }}>
 
               {status === "success" ? (
                 <div className="flex flex-col items-center text-center py-10 animate-fade-up">
                   <div
                     className="w-16 h-16 rounded-full flex items-center justify-center mb-5"
-                    style={{ backgroundColor: "rgba(212,175,55,0.15)" }}
+                    style={{ backgroundColor: "rgba(94, 110, 130,0.15)" }}
                   >
                     <svg
                       className="w-8 h-8"

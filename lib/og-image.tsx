@@ -18,7 +18,7 @@ export function renderOgImage() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          background: "linear-gradient(135deg, #2C1408 0%, #4D2F0E 100%)",
+          background: "linear-gradient(135deg, #1F2430 0%, #2E3440 100%)",
           padding: "72px 80px",
           fontFamily: "sans-serif",
         }}
@@ -29,11 +29,11 @@ export function renderOgImage() {
               width: 72,
               height: 72,
               borderRadius: 16,
-              background: "#D4AF37",
+              background: "#5E6E82",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              color: "#2C1408",
+              color: "#1F2430",
               fontSize: 40,
               fontWeight: 800,
             }}
@@ -41,10 +41,10 @@ export function renderOgImage() {
             CA
           </div>
           <div style={{ display: "flex", flexDirection: "column" }}>
-            <div style={{ color: "#D4AF37", fontSize: 30, fontWeight: 700 }}>
+            <div style={{ color: "#5E6E82", fontSize: 30, fontWeight: 700 }}>
               Raees Kadiwal &amp; Co.
             </div>
-            <div style={{ color: "rgba(245,239,214,0.6)", fontSize: 20 }}>
+            <div style={{ color: "rgba(205, 212, 222,0.6)", fontSize: 20 }}>
               Chartered Accountants
             </div>
           </div>
@@ -53,7 +53,7 @@ export function renderOgImage() {
         <div style={{ display: "flex", flexDirection: "column" }}>
           <div
             style={{
-              color: "#F5EFD6",
+              color: "#EEF1F4",
               fontSize: 60,
               fontWeight: 800,
               lineHeight: 1.1,
@@ -61,10 +61,10 @@ export function renderOgImage() {
           >
             Trusted CA Firm in
           </div>
-          <div style={{ color: "#D4AF37", fontSize: 60, fontWeight: 800, lineHeight: 1.1 }}>
+          <div style={{ color: "#5E6E82", fontSize: 60, fontWeight: 800, lineHeight: 1.1 }}>
             Malad East, Mumbai
           </div>
-          <div style={{ color: "rgba(245,239,214,0.75)", fontSize: 26, marginTop: 20 }}>
+          <div style={{ color: "rgba(205, 212, 222,0.75)", fontSize: 26, marginTop: 20 }}>
             ITR · GST · Audit · Company Registration · NRI Taxation
           </div>
         </div>
@@ -74,11 +74,11 @@ export function renderOgImage() {
             style={{
               height: 4,
               width: 64,
-              background: "#D4AF37",
+              background: "#5E6E82",
               borderRadius: 2,
             }}
           />
-          <div style={{ color: "rgba(245,239,214,0.6)", fontSize: 22 }}>
+          <div style={{ color: "rgba(205, 212, 222,0.6)", fontSize: 22 }}>
             17+ Years of Trusted Excellence · Mumbai – 400097
           </div>
         </div>

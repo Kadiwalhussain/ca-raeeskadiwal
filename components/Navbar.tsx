@@ -12,7 +12,6 @@ const navLinks = [
   { label: "Services", href: "#services" },
   { label: "About", href: "#about" },
   { label: "Insights", href: "/blog" },
-  { label: "Pricing", href: "#pricing" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -68,10 +67,10 @@ export default function Navbar({ solid = false }: { solid?: boolean }) {
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
           isLight
-            ? "backdrop-blur-lg shadow-[0_1px_0_0_rgba(212,175,55,0.15)]"
+            ? "backdrop-blur-lg shadow-[0_1px_0_0_rgba(94, 110, 130,0.15)]"
             : "bg-transparent"
         )}
-        style={isLight ? { backgroundColor: "rgba(255,254,245,0.97)" } : {}}
+        style={isLight ? { backgroundColor: "rgba(248, 250, 252,0.97)" } : {}}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-20">
@@ -180,7 +179,7 @@ export default function Navbar({ solid = false }: { solid?: boolean }) {
                 style={
                   isLight
                     ? { backgroundColor: "var(--navy)", borderColor: "var(--navy)", color: "white" }
-                    : { backgroundColor: "var(--gold)", borderColor: "var(--gold)", color: "var(--navy)" }
+                    : { backgroundColor: "#FFFFFF", borderColor: "#FFFFFF", color: "var(--navy)" }
                 }
               >
                 Book Free Consultation
@@ -217,7 +216,7 @@ export default function Navbar({ solid = false }: { solid?: boolean }) {
             mobileOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
           )}
         >
-          <div className="border-t shadow-xl" style={{ backgroundColor: "#FFFEF5", borderColor: "rgba(212,175,55,0.2)" }}>
+          <div className="border-t shadow-xl" style={{ backgroundColor: "#FFFFFF", borderColor: "rgba(94, 110, 130,0.2)" }}>
             <nav className="max-w-7xl mx-auto px-4 py-3 flex flex-col">
               {navLinks.map((link) => {
                 const isPage = link.href.startsWith("/");

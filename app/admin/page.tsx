@@ -144,9 +144,9 @@ export default function AdminDashboard() {
 
         .admin-root {
           min-height: 100vh;
-          background: #F5F0DC;
+          background: #EDF0F3;
           font-family: 'DM Sans', sans-serif;
-          color: #2C1408;
+          color: #1F2430;
           display: flex;
         }
 
@@ -154,7 +154,7 @@ export default function AdminDashboard() {
         .sidebar {
           width: 230px;
           flex-shrink: 0;
-          background: #2C1408;
+          background: #1F2430;
           display: flex;
           flex-direction: column;
           padding: 0;
@@ -165,7 +165,7 @@ export default function AdminDashboard() {
 
         .sidebar-logo {
           padding: 24px 20px 20px;
-          border-bottom: 1px solid rgba(212,175,55,0.15);
+          border-bottom: 1px solid rgba(94, 110, 130,0.15);
         }
 
         .sidebar-logo-row {
@@ -177,8 +177,8 @@ export default function AdminDashboard() {
         .sidebar-logo-icon {
           width: 36px; height: 36px;
           border-radius: 8px;
-          background: rgba(212,175,55,0.12);
-          border: 1px solid rgba(212,175,55,0.2);
+          background: rgba(94, 110, 130,0.12);
+          border: 1px solid rgba(94, 110, 130,0.2);
           display: flex; align-items: center; justify-content: center;
           flex-shrink: 0;
         }
@@ -187,14 +187,14 @@ export default function AdminDashboard() {
           font-family: 'Cinzel', serif;
           font-size: 12px;
           font-weight: 600;
-          color: #D4AF37;
+          color: #5E6E82;
           letter-spacing: 0.04em;
           line-height: 1.4;
         }
 
         .sidebar-role {
           font-size: 10px;
-          color: rgba(212,175,55,0.4);
+          color: rgba(94, 110, 130,0.4);
           letter-spacing: 0.08em;
           margin-top: 2px;
         }
@@ -209,7 +209,7 @@ export default function AdminDashboard() {
           font-weight: 600;
           letter-spacing: 0.14em;
           text-transform: uppercase;
-          color: rgba(212,175,55,0.35);
+          color: rgba(94, 110, 130,0.35);
           padding: 0 8px;
           margin-bottom: 6px;
           margin-top: 12px;
@@ -225,7 +225,7 @@ export default function AdminDashboard() {
           border-radius: 8px;
           font-size: 13px;
           font-weight: 500;
-          color: rgba(245,239,214,0.5);
+          color: rgba(205, 212, 222,0.5);
           cursor: pointer;
           transition: all 0.15s;
           border: 1px solid transparent;
@@ -237,22 +237,22 @@ export default function AdminDashboard() {
         }
 
         .nav-item:hover {
-          color: rgba(245,239,214,0.85);
-          background: rgba(212,175,55,0.07);
+          color: rgba(205, 212, 222,0.85);
+          background: rgba(94, 110, 130,0.07);
         }
 
         .nav-item.active {
-          color: #F5EFD6;
-          background: rgba(212,175,55,0.12);
-          border-color: rgba(212,175,55,0.2);
+          color: #EEF1F4;
+          background: rgba(94, 110, 130,0.12);
+          border-color: rgba(94, 110, 130,0.2);
         }
 
-        .nav-item.active svg { color: #D4AF37; }
+        .nav-item.active svg { color: #5E6E82; }
 
         .nav-badge {
           margin-left: auto;
-          background: #D4AF37;
-          color: #2C1408;
+          background: #5E6E82;
+          color: #1F2430;
           font-size: 10px;
           font-weight: 700;
           padding: 1px 7px;
@@ -261,7 +261,7 @@ export default function AdminDashboard() {
 
         .sidebar-bottom {
           padding: 12px;
-          border-top: 1px solid rgba(212,175,55,0.1);
+          border-top: 1px solid rgba(94, 110, 130,0.1);
         }
 
         /* ── Main ── */
@@ -291,13 +291,13 @@ export default function AdminDashboard() {
           font-family: 'Cinzel', serif;
           font-size: 17px;
           font-weight: 600;
-          color: #2C1408;
+          color: #1F2430;
           letter-spacing: 0.02em;
         }
 
         .topbar-left p {
           font-size: 12px;
-          color: #A89660;
+          color: #99A2AE;
           margin-top: 1px;
         }
 
@@ -314,15 +314,15 @@ export default function AdminDashboard() {
         }
 
         .search-box:focus-within {
-          border-color: #D4AF37;
-          box-shadow: 0 0 0 3px rgba(212,175,55,0.1);
+          border-color: #5E6E82;
+          box-shadow: 0 0 0 3px rgba(94, 110, 130,0.1);
         }
 
         .search-input {
           background: none; border: none; outline: none;
           font-family: 'DM Sans', sans-serif;
           font-size: 13px;
-          color: #2C1408;
+          color: #1F2430;
           width: 100%;
         }
 
@@ -350,8 +350,8 @@ export default function AdminDashboard() {
         }
 
         .stat-card:hover {
-          border-color: #D4AF37;
-          box-shadow: 0 4px 16px rgba(212,175,55,0.1);
+          border-color: #5E6E82;
+          box-shadow: 0 4px 16px rgba(94, 110, 130,0.1);
         }
 
         .stat-card::after {
@@ -360,7 +360,7 @@ export default function AdminDashboard() {
           bottom: 0; left: 0; right: 0;
           height: 3px;
           border-radius: 0 0 12px 12px;
-          background: linear-gradient(90deg, transparent, var(--accent-color, #D4AF37), transparent);
+          background: linear-gradient(90deg, transparent, var(--accent-color, #5E6E82), transparent);
           opacity: 0.4;
         }
 
@@ -375,14 +375,14 @@ export default function AdminDashboard() {
           font-family: 'Cinzel', serif;
           font-size: 34px;
           font-weight: 700;
-          color: #2C1408;
+          color: #1F2430;
           line-height: 1;
           margin-bottom: 4px;
         }
 
         .stat-label {
           font-size: 12px;
-          color: #A89660;
+          color: #99A2AE;
           font-weight: 500;
         }
 
@@ -393,9 +393,9 @@ export default function AdminDashboard() {
           font-weight: 600;
           padding: 3px 8px;
           border-radius: 6px;
-          background: rgba(212,175,55,0.1);
-          color: #CE8946;
-          border: 1px solid rgba(212,175,55,0.2);
+          background: rgba(94, 110, 130,0.1);
+          color: #46586E;
+          border: 1px solid rgba(94, 110, 130,0.2);
         }
 
         /* ── Service breakdown ── */
@@ -416,7 +416,7 @@ export default function AdminDashboard() {
           font-family: 'Cinzel', serif;
           font-size: 13px;
           font-weight: 600;
-          color: #2C1408;
+          color: #1F2430;
           letter-spacing: 0.06em;
           text-transform: uppercase;
           display: flex; align-items: center; gap: 8px;
@@ -427,10 +427,10 @@ export default function AdminDashboard() {
           display: block;
           width: 3px; height: 14px;
           border-radius: 2px;
-          background: #D4AF37;
+          background: #5E6E82;
         }
 
-        .section-sub { font-size: 12px; color: #A89660; }
+        .section-sub { font-size: 12px; color: #99A2AE; }
 
         .service-row {
           display: flex; align-items: center; gap: 12px;
@@ -439,7 +439,7 @@ export default function AdminDashboard() {
 
         .service-name {
           font-size: 12px;
-          color: #4D2F0E;
+          color: #2E3440;
           min-width: 180px;
           white-space: nowrap;
           overflow: hidden;
@@ -458,14 +458,14 @@ export default function AdminDashboard() {
         .service-bar {
           height: 100%;
           border-radius: 4px;
-          background: linear-gradient(90deg, #2C1408, #CE8946);
+          background: linear-gradient(90deg, #1F2430, #46586E);
           transition: width 0.9s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .service-count {
           font-size: 12px;
           font-weight: 700;
-          color: #2C1408;
+          color: #1F2430;
           min-width: 24px;
           text-align: right;
         }
@@ -483,32 +483,32 @@ export default function AdminDashboard() {
           font-weight: 500;
           border: 1.5px solid #E8DFB8;
           background: #FDFAF0;
-          color: #A89660;
+          color: #99A2AE;
           cursor: pointer;
           transition: all 0.15s;
           display: flex; align-items: center; gap: 6px;
         }
 
-        .filter-tab:hover { border-color: #D4AF37; color: #2C1408; }
+        .filter-tab:hover { border-color: #5E6E82; color: #1F2430; }
 
         .filter-tab.active {
-          background: #2C1408;
-          border-color: #2C1408;
-          color: #F5EFD6;
+          background: #1F2430;
+          border-color: #1F2430;
+          color: #EEF1F4;
         }
 
         .filter-count {
           font-size: 10px;
           font-weight: 700;
-          background: rgba(44,20,8,0.08);
-          color: #4D2F0E;
+          background: rgba(31, 36, 48,0.08);
+          color: #2E3440;
           padding: 1px 6px;
           border-radius: 5px;
         }
 
         .filter-tab.active .filter-count {
-          background: rgba(245,239,214,0.15);
-          color: #D4AF37;
+          background: rgba(205, 212, 222,0.15);
+          color: #5E6E82;
         }
 
         /* ── Table ── */
@@ -530,9 +530,9 @@ export default function AdminDashboard() {
           font-weight: 700;
           letter-spacing: 0.1em;
           text-transform: uppercase;
-          color: #A89660;
+          color: #99A2AE;
           border-bottom: 1.5px solid #E8DFB8;
-          background: #F5F0DC;
+          background: #EDF0F3;
         }
 
         tbody tr {
@@ -541,20 +541,20 @@ export default function AdminDashboard() {
           cursor: pointer;
         }
 
-        tbody tr:hover { background: rgba(212,175,55,0.05); }
+        tbody tr:hover { background: rgba(94, 110, 130,0.05); }
         tbody tr:last-child { border-bottom: none; }
 
         tbody td {
           padding: 13px 16px;
           font-size: 13px;
-          color: #4D2F0E;
+          color: #2E3440;
           vertical-align: middle;
         }
 
-        .td-name { font-weight: 600; color: #2C1408; }
-        .td-email { font-size: 11px; color: #A89660; margin-top: 1px; }
-        .td-service { font-size: 11px; color: #8A7040; max-width: 160px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-        .td-date { font-size: 11px; color: #A89660; white-space: nowrap; }
+        .td-name { font-weight: 600; color: #1F2430; }
+        .td-email { font-size: 11px; color: #99A2AE; margin-top: 1px; }
+        .td-service { font-size: 11px; color: #78828F; max-width: 160px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .td-date { font-size: 11px; color: #99A2AE; white-space: nowrap; }
 
         /* ── Action buttons ── */
         .action-btn {
@@ -569,8 +569,8 @@ export default function AdminDashboard() {
           background: none;
         }
 
-        .btn-read { border-color: #D4AF37; color: #CE8946; }
-        .btn-read:hover { background: rgba(212,175,55,0.1); }
+        .btn-read { border-color: #5E6E82; color: #46586E; }
+        .btn-read:hover { background: rgba(94, 110, 130,0.1); }
 
         .btn-replied { border-color: #4CAF50; color: #2E7D32; }
         .btn-replied:hover { background: rgba(76,175,80,0.08); }
@@ -592,15 +592,15 @@ export default function AdminDashboard() {
         }
 
         .badge-new {
-          background: rgba(212,175,55,0.12);
-          color: #CE8946;
-          border: 1px solid rgba(212,175,55,0.3);
+          background: rgba(94, 110, 130,0.12);
+          color: #46586E;
+          border: 1px solid rgba(94, 110, 130,0.3);
         }
 
         .badge-read {
-          background: rgba(44,20,8,0.07);
-          color: #4D2F0E;
-          border: 1px solid rgba(44,20,8,0.15);
+          background: rgba(31, 36, 48,0.07);
+          color: #2E3440;
+          border: 1px solid rgba(31, 36, 48,0.15);
         }
 
         .badge-replied {
@@ -614,10 +614,10 @@ export default function AdminDashboard() {
           display: flex; align-items: center; justify-content: space-between;
           padding: 12px 20px;
           border-top: 1.5px solid #E8DFB8;
-          background: #F5F0DC;
+          background: #EDF0F3;
         }
 
-        .page-info { font-size: 12px; color: #A89660; }
+        .page-info { font-size: 12px; color: #99A2AE; }
 
         .page-btns { display: flex; gap: 5px; }
 
@@ -626,26 +626,26 @@ export default function AdminDashboard() {
           border-radius: 6px;
           border: 1.5px solid #E8DFB8;
           background: #FDFAF0;
-          color: #A89660;
+          color: #99A2AE;
           font-size: 12px;
           cursor: pointer;
           transition: all 0.15s;
         }
 
-        .page-btn:hover:not(:disabled) { border-color: #D4AF37; color: #2C1408; }
+        .page-btn:hover:not(:disabled) { border-color: #5E6E82; color: #1F2430; }
         .page-btn:disabled { opacity: 0.35; cursor: not-allowed; }
 
         .page-btn.current {
-          background: #2C1408;
-          border-color: #2C1408;
-          color: #F5EFD6;
+          background: #1F2430;
+          border-color: #1F2430;
+          color: #EEF1F4;
           font-weight: 600;
         }
 
         /* ── Slide-over ── */
         .overlay {
           position: fixed; inset: 0;
-          background: rgba(44,20,8,0.3);
+          background: rgba(31, 36, 48,0.3);
           z-index: 40;
           backdrop-filter: blur(2px);
           animation: fadeIn 0.2s ease;
@@ -673,31 +673,31 @@ export default function AdminDashboard() {
           padding: 24px 24px 18px;
           border-bottom: 1.5px solid #E8DFB8;
           gap: 12px;
-          background: #F5F0DC;
+          background: #EDF0F3;
         }
 
         .so-name {
           font-family: 'Cinzel', serif;
           font-size: 18px;
           font-weight: 600;
-          color: #2C1408;
+          color: #1F2430;
           margin-bottom: 3px;
         }
 
-        .so-service { font-size: 12px; color: #A89660; }
+        .so-service { font-size: 12px; color: #99A2AE; }
 
         .so-close {
           width: 32px; height: 32px;
           border-radius: 8px;
           border: 1.5px solid #E8DFB8;
           background: #fff;
-          color: #A89660;
+          color: #99A2AE;
           cursor: pointer;
           display: flex; align-items: center; justify-content: center;
           flex-shrink: 0;
           transition: all 0.15s;
         }
-        .so-close:hover { border-color: #D4AF37; color: #2C1408; background: #FDFAF0; }
+        .so-close:hover { border-color: #5E6E82; color: #1F2430; background: #FDFAF0; }
 
         .so-body { padding: 20px 24px; flex: 1; }
 
@@ -708,21 +708,21 @@ export default function AdminDashboard() {
           font-weight: 700;
           letter-spacing: 0.1em;
           text-transform: uppercase;
-          color: #A89660;
+          color: #99A2AE;
           margin-bottom: 5px;
         }
 
-        .so-value { font-size: 14px; color: #2C1408; line-height: 1.6; }
-        .so-value a { color: #CE8946; text-decoration: none; }
+        .so-value { font-size: 14px; color: #1F2430; line-height: 1.6; }
+        .so-value a { color: #46586E; text-decoration: none; }
         .so-value a:hover { text-decoration: underline; }
 
         .so-message {
-          background: #F5F0DC;
+          background: #EDF0F3;
           border: 1.5px solid #E8DFB8;
           border-radius: 10px;
           padding: 14px;
           font-size: 13px;
-          color: #4D2F0E;
+          color: #2E3440;
           line-height: 1.75;
           white-space: pre-wrap;
         }
@@ -749,8 +749,8 @@ export default function AdminDashboard() {
           background: none;
         }
 
-        .so-btn-read { border-color: #D4AF37; color: #CE8946; }
-        .so-btn-read:hover { background: rgba(212,175,55,0.08); }
+        .so-btn-read { border-color: #5E6E82; color: #46586E; }
+        .so-btn-read:hover { background: rgba(94, 110, 130,0.08); }
 
         .so-btn-replied { border-color: #4CAF50; color: #2E7D32; }
         .so-btn-replied:hover { background: rgba(76,175,80,0.06); }
@@ -784,11 +784,11 @@ export default function AdminDashboard() {
         .so-contact-wa:hover { background: rgba(37,211,102,0.1); border-color: rgba(37,211,102,0.5); }
 
         .so-contact-email {
-          border-color: rgba(212,175,55,0.3);
-          color: #CE8946;
-          background: rgba(212,175,55,0.05);
+          border-color: rgba(94, 110, 130,0.3);
+          color: #46586E;
+          background: rgba(94, 110, 130,0.05);
         }
-        .so-contact-email:hover { background: rgba(212,175,55,0.1); border-color: rgba(212,175,55,0.5); }
+        .so-contact-email:hover { background: rgba(94, 110, 130,0.1); border-color: rgba(94, 110, 130,0.5); }
 
         /* ── Toast ── */
         .toast {
@@ -801,7 +801,7 @@ export default function AdminDashboard() {
           z-index: 100;
           animation: toastIn 0.25s ease;
           display: flex; align-items: center; gap: 8px;
-          box-shadow: 0 8px 24px rgba(44,20,8,0.12);
+          box-shadow: 0 8px 24px rgba(31, 36, 48,0.12);
           border: 1.5px solid;
         }
 
@@ -825,13 +825,13 @@ export default function AdminDashboard() {
           text-align: center;
         }
 
-        .empty-state svg { width: 40px; height: 40px; color: #D4AF37; margin: 0 auto 12px; display: block; opacity: 0.4; }
-        .empty-state p { font-size: 14px; color: #A89660; }
+        .empty-state svg { width: 40px; height: 40px; color: #5E6E82; margin: 0 auto 12px; display: block; opacity: 0.4; }
+        .empty-state p { font-size: 14px; color: #99A2AE; }
         .empty-state span { font-size: 12px; color: #C4B88A; }
 
         /* ── Skeleton ── */
         .skeleton {
-          background: linear-gradient(90deg, #EDE6C8 25%, #F5F0DC 50%, #EDE6C8 75%);
+          background: linear-gradient(90deg, #EDE6C8 25%, #EDF0F3 50%, #EDE6C8 75%);
           background-size: 200% 100%;
           animation: shimmer 1.4s ease-in-out infinite;
           border-radius: 4px;
@@ -923,7 +923,7 @@ export default function AdminDashboard() {
             </div>
             {activeTab === "inquiries" && (
               <div className="search-box">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#A89660" strokeWidth="2">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#99A2AE" strokeWidth="2">
                   <circle cx="11" cy="11" r="8" />
                   <line x1="21" y1="21" x2="16.65" y2="16.65" />
                 </svg>
@@ -943,10 +943,10 @@ export default function AdminDashboard() {
               <>
                 <div className="stats-grid">
                   {[
-                    { label: "Total Inquiries", value: stats?.total ?? 0, icon: "M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75", iconBg: "#FFF8E1", iconColor: "#CE8946", chip: `${stats?.weekCount ?? 0} this week`, accent: "#D4AF37" },
-                    { label: "New / Unread", value: stats?.newCount ?? 0, icon: "M22 17H2a3 3 0 0 0 3-3V9a7 7 0 0 1 14 0v5a3 3 0 0 0 3 3zm-8.27 4a2 2 0 0 1-3.46 0", iconBg: "rgba(212,175,55,0.1)", iconColor: "#D4AF37", chip: "Needs attention", accent: "#D4AF37" },
+                    { label: "Total Inquiries", value: stats?.total ?? 0, icon: "M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75", iconBg: "#FFF8E1", iconColor: "#46586E", chip: `${stats?.weekCount ?? 0} this week`, accent: "#5E6E82" },
+                    { label: "New / Unread", value: stats?.newCount ?? 0, icon: "M22 17H2a3 3 0 0 0 3-3V9a7 7 0 0 1 14 0v5a3 3 0 0 0 3 3zm-8.27 4a2 2 0 0 1-3.46 0", iconBg: "rgba(94, 110, 130,0.1)", iconColor: "#5E6E82", chip: "Needs attention", accent: "#5E6E82" },
                     { label: "Replied", value: stats?.repliedCount ?? 0, icon: "M9 12l2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0z", iconBg: "rgba(76,175,80,0.1)", iconColor: "#2E7D32", chip: "Completed", accent: "#4CAF50" },
-                    { label: "Today", value: stats?.todayCount ?? 0, icon: "M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2z", iconBg: "rgba(44,20,8,0.07)", iconColor: "#4D2F0E", chip: "Today's leads", accent: "#CE8946" },
+                    { label: "Today", value: stats?.todayCount ?? 0, icon: "M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2z", iconBg: "rgba(31, 36, 48,0.07)", iconColor: "#2E3440", chip: "Today's leads", accent: "#46586E" },
                   ].map((s) => (
                     <div key={s.label} className="stat-card" style={{ "--accent-color": s.accent } as React.CSSProperties}>
                       <div className="stat-icon" style={{ background: s.iconBg }}>
@@ -985,8 +985,8 @@ export default function AdminDashboard() {
                     style={{
                       display: "inline-flex", alignItems: "center", gap: 8,
                       padding: "10px 24px", borderRadius: 8, fontSize: 13, fontWeight: 600,
-                      background: "#2C1408", color: "#F5EFD6", border: "none", cursor: "pointer",
-                      boxShadow: "0 2px 8px rgba(44,20,8,0.15)", transition: "all 0.15s",
+                      background: "#1F2430", color: "#EEF1F4", border: "none", cursor: "pointer",
+                      boxShadow: "0 2px 8px rgba(31, 36, 48,0.15)", transition: "all 0.15s",
                     }}
                   >
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -1079,7 +1079,7 @@ export default function AdminDashboard() {
                                 <div className="td-email">{c.email}</div>
                               </td>
                               <td><div className="td-service">{c.service}</div></td>
-                              <td style={{ fontSize: 13, color: "#4D2F0E" }}>{c.phone}</td>
+                              <td style={{ fontSize: 13, color: "#2E3440" }}>{c.phone}</td>
                               <td><div className="td-date">{formatDate(c.createdAt)}</div></td>
                               <td><StatusBadge status={c.status} /></td>
                               <td onClick={(e) => e.stopPropagation()}>
@@ -1165,7 +1165,7 @@ export default function AdminDashboard() {
                 </div>
                 <div className="so-field">
                   <div className="so-label">Received On</div>
-                  <div className="so-value" style={{ fontSize: 13, color: "#A89660" }}>{formatDate(selected.createdAt)}</div>
+                  <div className="so-value" style={{ fontSize: 13, color: "#99A2AE" }}>{formatDate(selected.createdAt)}</div>
                 </div>
                 <div className="so-field">
                   <div className="so-label">Message</div>

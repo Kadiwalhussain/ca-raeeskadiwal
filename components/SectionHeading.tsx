@@ -25,7 +25,7 @@ export default function SectionHeading({
         <span className="h-px w-10" style={{ backgroundColor: "var(--gold)" }} />
         <span
           className="text-sm font-medium tracking-wide"
-          style={{ color: onDark ? "#C4B890" : "#8C7B57" }}
+          style={{ color: onDark ? "#AEB6C1" : "#78828F" }}
         >
           {kicker}
         </span>
@@ -34,7 +34,7 @@ export default function SectionHeading({
         className="font-heading font-medium leading-[1.08]"
         style={{
           fontSize: "clamp(2rem, 4vw, 3rem)",
-          color: onDark ? "#FFFFFF" : "#2C1408",
+          color: onDark ? "#FFFFFF" : "#1F2430",
         }}
       >
         {title}
@@ -42,7 +42,7 @@ export default function SectionHeading({
       {lead && (
         <p
           className={cn("text-lg leading-relaxed mt-5", centered && "mx-auto")}
-          style={{ color: onDark ? "#D8CBB0" : "#6B5938" }}
+          style={{ color: onDark ? "#C3CCD8" : "#55606E" }}
         >
           {lead}
         </p>

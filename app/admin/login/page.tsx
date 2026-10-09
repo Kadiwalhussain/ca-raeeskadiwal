@@ -46,7 +46,7 @@ export default function AdminLogin() {
 
         .login-root {
           min-height: 100vh;
-          background: #F5F0DC;
+          background: #EDF0F3;
           display: flex;
           font-family: 'DM Sans', sans-serif;
           overflow: hidden;
@@ -56,7 +56,7 @@ export default function AdminLogin() {
         .login-left {
           width: 420px;
           flex-shrink: 0;
-          background: #2C1408;
+          background: #1F2430;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
@@ -73,7 +73,7 @@ export default function AdminLogin() {
           top: -120px; right: -120px;
           width: 380px; height: 380px;
           border-radius: 50%;
-          background: radial-gradient(circle, rgba(212,175,55,0.12) 0%, transparent 70%);
+          background: radial-gradient(circle, rgba(94, 110, 130,0.12) 0%, transparent 70%);
           pointer-events: none;
         }
 
@@ -83,7 +83,7 @@ export default function AdminLogin() {
           bottom: -80px; left: -80px;
           width: 280px; height: 280px;
           border-radius: 50%;
-          background: radial-gradient(circle, rgba(206,137,70,0.1) 0%, transparent 70%);
+          background: radial-gradient(circle, rgba(70, 88, 110,0.1) 0%, transparent 70%);
           pointer-events: none;
         }
 
@@ -96,8 +96,8 @@ export default function AdminLogin() {
         .left-logo-icon {
           width: 44px; height: 44px;
           border-radius: 10px;
-          background: rgba(212,175,55,0.15);
-          border: 1px solid rgba(212,175,55,0.25);
+          background: rgba(94, 110, 130,0.15);
+          border: 1px solid rgba(94, 110, 130,0.25);
           display: flex; align-items: center; justify-content: center;
         }
 
@@ -105,7 +105,7 @@ export default function AdminLogin() {
           font-family: 'Cinzel', serif;
           font-size: 13px;
           font-weight: 600;
-          color: #D4AF37;
+          color: #5E6E82;
           letter-spacing: 0.04em;
           line-height: 1.4;
         }
@@ -119,7 +119,7 @@ export default function AdminLogin() {
           font-weight: 600;
           letter-spacing: 0.14em;
           text-transform: uppercase;
-          color: rgba(212,175,55,0.6);
+          color: rgba(94, 110, 130,0.6);
           margin-bottom: 16px;
           display: flex; align-items: center; gap: 8px;
         }
@@ -128,23 +128,23 @@ export default function AdminLogin() {
           content: '';
           display: block;
           width: 24px; height: 1px;
-          background: rgba(212,175,55,0.4);
+          background: rgba(94, 110, 130,0.4);
         }
 
         .left-title {
           font-family: 'Cinzel', serif;
           font-size: 28px;
           font-weight: 700;
-          color: #F5EFD6;
+          color: #EEF1F4;
           line-height: 1.35;
           margin-bottom: 20px;
         }
 
-        .left-title span { color: #D4AF37; }
+        .left-title span { color: #5E6E82; }
 
         .left-desc {
           font-size: 14px;
-          color: rgba(245,239,214,0.5);
+          color: rgba(205, 212, 222,0.5);
           line-height: 1.8;
         }
 
@@ -157,7 +157,7 @@ export default function AdminLogin() {
 
         .left-stat {
           background: rgba(255,255,255,0.04);
-          border: 1px solid rgba(212,175,55,0.12);
+          border: 1px solid rgba(94, 110, 130,0.12);
           border-radius: 10px;
           padding: 14px;
         }
@@ -166,13 +166,13 @@ export default function AdminLogin() {
           font-family: 'Cinzel', serif;
           font-size: 22px;
           font-weight: 700;
-          color: #D4AF37;
+          color: #5E6E82;
           margin-bottom: 2px;
         }
 
         .left-stat-lbl {
           font-size: 11px;
-          color: rgba(245,239,214,0.4);
+          color: rgba(205, 212, 222,0.4);
         }
 
         /* Right form panel */
@@ -199,22 +199,22 @@ export default function AdminLogin() {
           display: inline-flex;
           align-items: center;
           gap: 6px;
-          background: rgba(212,175,55,0.1);
-          border: 1px solid rgba(212,175,55,0.25);
+          background: rgba(94, 110, 130,0.1);
+          border: 1px solid rgba(94, 110, 130,0.25);
           border-radius: 20px;
           padding: 5px 12px;
           font-size: 11px;
           font-weight: 600;
           letter-spacing: 0.08em;
           text-transform: uppercase;
-          color: #CE8946;
+          color: #46586E;
           margin-bottom: 24px;
         }
 
         .card-badge-dot {
           width: 6px; height: 6px;
           border-radius: 50%;
-          background: #D4AF37;
+          background: #5E6E82;
           animation: pulse-dot 2s ease-in-out infinite;
         }
 
@@ -227,14 +227,14 @@ export default function AdminLogin() {
           font-family: 'Cinzel', serif;
           font-size: 26px;
           font-weight: 700;
-          color: #2C1408;
+          color: #1F2430;
           margin-bottom: 6px;
           letter-spacing: 0.01em;
         }
 
         .card-subtitle {
           font-size: 14px;
-          color: #8A7A58;
+          color: #78828F;
           margin-bottom: 36px;
           line-height: 1.6;
         }
@@ -245,7 +245,7 @@ export default function AdminLogin() {
           display: block;
           font-size: 12px;
           font-weight: 600;
-          color: #4D2F0E;
+          color: #2E3440;
           margin-bottom: 7px;
           letter-spacing: 0.02em;
         }
@@ -260,7 +260,7 @@ export default function AdminLogin() {
           padding: 12px 44px 12px 14px;
           font-family: 'DM Sans', sans-serif;
           font-size: 15px;
-          color: #2C1408;
+          color: #1F2430;
           outline: none;
           transition: border-color 0.2s, box-shadow 0.2s;
         }
@@ -268,8 +268,8 @@ export default function AdminLogin() {
         .field-input::placeholder { color: #C4B88A; }
 
         .field-input:focus {
-          border-color: #D4AF37;
-          box-shadow: 0 0 0 3px rgba(212,175,55,0.12);
+          border-color: #5E6E82;
+          box-shadow: 0 0 0 3px rgba(94, 110, 130,0.12);
         }
 
         .field-input.error-input {
@@ -281,11 +281,11 @@ export default function AdminLogin() {
           position: absolute; right: 13px; top: 50%;
           transform: translateY(-50%);
           background: none; border: none;
-          color: #A89660; cursor: pointer;
+          color: #99A2AE; cursor: pointer;
           padding: 2px; display: flex;
           transition: color 0.15s;
         }
-        .field-toggle:hover { color: #2C1408; }
+        .field-toggle:hover { color: #1F2430; }
 
         .error-box {
           display: flex; align-items: center; gap: 8px;
@@ -303,8 +303,8 @@ export default function AdminLogin() {
           padding: 13px;
           border-radius: 10px;
           border: none;
-          background: #2C1408;
-          color: #F5EFD6;
+          background: #1F2430;
+          color: #EEF1F4;
           font-family: 'Cinzel', serif;
           font-size: 13px;
           font-weight: 600;
@@ -313,12 +313,12 @@ export default function AdminLogin() {
           cursor: pointer;
           transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
           display: flex; align-items: center; justify-content: center; gap: 8px;
-          box-shadow: 0 4px 16px rgba(44,20,8,0.18);
+          box-shadow: 0 4px 16px rgba(31, 36, 48,0.18);
         }
 
         .submit-btn:hover:not(:disabled) {
-          background: #4D2F0E;
-          box-shadow: 0 6px 20px rgba(44,20,8,0.25);
+          background: #2E3440;
+          box-shadow: 0 6px 20px rgba(31, 36, 48,0.25);
           transform: translateY(-1px);
         }
 
@@ -327,8 +327,8 @@ export default function AdminLogin() {
 
         .spinner {
           width: 15px; height: 15px;
-          border: 2px solid rgba(245,239,214,0.3);
-          border-top-color: #F5EFD6;
+          border: 2px solid rgba(205, 212, 222,0.3);
+          border-top-color: #EEF1F4;
           border-radius: 50%;
           animation: spin 0.7s linear infinite;
           display: inline-block;
@@ -345,7 +345,7 @@ export default function AdminLogin() {
         .gold-bar {
           height: 3px;
           border-radius: 2px;
-          background: linear-gradient(90deg, #D4AF37, #CE8946, #D4AF37);
+          background: linear-gradient(90deg, #5E6E82, #46586E, #5E6E82);
           margin-bottom: 32px;
           width: 48px;
         }

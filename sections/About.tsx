@@ -52,7 +52,7 @@ const expertise = [
 
 export default function About() {
   return (
-    <section id="about" className="py-20 lg:py-28" style={{ backgroundColor: "#FFFEF8" }}>
+    <section id="about" className="py-20 lg:py-28" style={{ backgroundColor: "#FFFFFF" }}>
       <div className="max-w-6xl mx-auto px-5 sm:px-8">
         {/* Header */}
         <div className="mb-16">
@@ -70,7 +70,7 @@ export default function About() {
               <div key={item.title}>
                 <div
                   className="w-11 h-11 rounded-lg flex items-center justify-center mb-4"
-                  style={{ backgroundColor: "rgba(212,175,55,0.14)", color: "var(--caramel)" }}
+                  style={{ backgroundColor: "rgba(94, 110, 130,0.14)", color: "var(--caramel)" }}
                 >
                   {item.icon}
                 </div>
@@ -80,7 +80,7 @@ export default function About() {
                 >
                   {item.title}
                 </h3>
-                <p className="text-sm text-[#6B5938] leading-relaxed">
+                <p className="text-sm text-[#55606E] leading-relaxed">
                   {item.desc}
                 </p>
               </div>
@@ -91,7 +91,7 @@ export default function About() {
           <div>
             <div
               className="rounded-xl p-8 mb-8"
-              style={{ backgroundColor: "rgba(212,175,55,0.09)", border: "1px solid rgba(212,175,55,0.2)" }}
+              style={{ backgroundColor: "rgba(94, 110, 130,0.09)", border: "1px solid rgba(94, 110, 130,0.2)" }}
             >
               <h3
                 className="font-heading font-semibold text-lg mb-6"
@@ -122,7 +122,7 @@ export default function About() {
                 <div
                   key={item.sub}
                   className="flex-1 text-center py-5 rounded-lg border"
-                  style={{ borderColor: "rgba(212,175,55,0.25)", backgroundColor: "#FFFEF5" }}
+                  style={{ borderColor: "rgba(94, 110, 130,0.25)", backgroundColor: "#FFFFFF" }}
                 >
                   <div
                     className="font-heading font-bold text-2xl mb-1"

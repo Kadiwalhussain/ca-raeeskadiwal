@@ -74,13 +74,13 @@
   --sidebar-ring: oklch(0.708 0 0);
 
   /* Brand colors — Golden Taupe palette */
-  --navy: #2C1408;
-  --navy-light: #4D2F0E;
-  --gold: #D4AF37;
-  --gold-light: #E5C855;
-  --khaki: #BDB76B;
-  --caramel: #CE8946;
-  --cream: #FDFBD4;
+  --navy: #1F2430;
+  --navy-light: #2E3440;
+  --gold: #5E6E82;
+  --gold-light: #7E8C9E;
+  --khaki: #8A94A3;
+  --caramel: #46586E;
+  --cream: #EEF1F4;
   --whatsapp: #25d366;
 }
 
@@ -98,8 +98,8 @@
 
   /* Text selection */
   ::selection {
-    background-color: rgba(212, 175, 55, 0.28);
-    color: #2C1408;
+    background-color: rgba(94, 110, 130, 0.28);
+    color: #1F2430;
   }
 
   /* Custom scrollbar */
@@ -107,14 +107,14 @@
     width: 6px;
   }
   ::-webkit-scrollbar-track {
-    background: #F5F0DC;
+    background: #EDF0F3;
   }
   ::-webkit-scrollbar-thumb {
-    background: #D4AF37;
+    background: #5E6E82;
     border-radius: 3px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #CE8946;
+    background: #46586E;
   }
 
   /* Form inputs */
@@ -172,10 +172,10 @@
   }
   /* Warm section backgrounds */
   .bg-section-light {
-    background-color: #FFFEF5;
+    background-color: #FFFFFF;
   }
   .bg-section-alt {
-    background-color: #F5F0DC;
+    background-color: #EDF0F3;
   }
 
   /* WhatsApp pulse animation */
@@ -201,8 +201,8 @@
     background: linear-gradient(
       90deg,
       transparent,
-      rgba(212, 175, 55, 0.5) 15%,
-      rgba(212, 175, 55, 0.5) 85%,
+      rgba(94, 110, 130, 0.5) 15%,
+      rgba(94, 110, 130, 0.5) 85%,
       transparent
     );
   }
